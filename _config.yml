@@ -1,0 +1,50 @@
+url: "https://example.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Your Name" # the name of your site, e.g. ACME Corp.
+
+permalink: /blog/:slug/
+
+plugins:
+  - jekyll-tailwind
+  - jekyll-last-modified-at
+  - jekyll-scholar
+  - jekyll-feed
+  - jekyll-sitemap
+
+tailwind:
+  input: assets/css/app.css
+  minify: true
+
+collections:
+  pages:
+    output: true
+  news:
+    output: true
+    permalink: /news/:slug/
+  research:
+    output: true
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+scholar:
+  bibliography: references.bib
+  style: apa
+  bibliography_template: bib
+  bibliography_list_tag: ul
+  sort_by: year
+  order: descending
+
+exclude:
+  - README.md
+  - DESIGN.md
+  - tailwind_enabler.css
+

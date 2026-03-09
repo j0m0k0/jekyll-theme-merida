@@ -1,0 +1,65 @@
+---
+---
+<div
+  class="bib-entry border-1 border-border-main break-words px-2 pb-2 mb-8! last:mb-0 text-center">
+
+  <!-- Title -->
+  <h2 class="mt-2! mb-0! text-center!">
+    {{ entry.title }}
+  </h2>
+
+  <!-- Venue / Conference / Journal -->
+  {% assign year_str = entry.year | append: "" %}
+  {% assign clean_booktitle = entry.booktitle | default: "" | strip %}
+  {% assign prefix = clean_booktitle | slice: 0, 4 %}
+  {% if prefix == year_str %}
+  {% assign cleaned_booktitle = clean_booktitle | remove_first: year_str | strip %}
+  {% else %}
+  {% assign cleaned_booktitle = clean_booktitle %}
+  {% endif %}
+
+  <p class="text-neutral-500 truncate">
+    {% if cleaned_booktitle != "" %}
+    <span>{{ cleaned_booktitle }},</span>
+    {% endif %}
+    {% if entry.journal %}
+    <span>{{ entry.journal }},</span>
+    {% endif %}
+    {% if entry.year %}
+    <span>{{ entry.year }}</span>
+    {% endif %}
+  </p>
+
+  <!-- Authors -->
+  <p>{{ entry.author }}</p>
+
+  <!-- Optional abstract -->
+  {% if entry.abstract %}
+  <p class="text-neutral-600 text-sm">{{ entry.abstract | truncate: 250, "..." }}</p>
+  {% endif %}
+
+  <!-- Links -->
+  <div class="flex flex-wrap gap-3 text-sm justify-center">
+    {% if entry.url %}
+    <a class=" border border-border-main px-2 bg-blue-50" href="{{ entry.url }}">Paper</a>
+    {% endif %}
+    {% if entry.code %}
+    <a class=" text-green-500! border border-border-main px-2 bg-green-50" href="{{ entry.code }}">Code</a>
+    {% endif %}
+    {% if entry.slides %}
+    <a class=" text-violet-500! border border-border-main px-2 bg-violet-50" href="{{ entry.slides }}">Slides</a>
+    {% endif %}
+    {% if entry.bibtex %}
+    <button class="hover:cursor-pointer border border-border-main px-2 bg-gray-50 bibtex-toggle" type="button">BibTeX</button>
+    {% endif %}
+  </div>
+
+  <!-- Hidden details -->
+  {% if entry.bibtex %}
+  <details class="bibtex-details mt-4">
+    <summary class="sr-only">BibTeX</summary>
+    <pre class="text-left mt-2 bg-neutral-200 rounded-lg p-4 text-xs font-mono whitespace-pre-wrap break-words">{{ entry.bibtex }}</pre>
+  </details>
+  {% endif %}
+
+</div>

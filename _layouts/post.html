@@ -1,0 +1,74 @@
+---
+layout: base
+---
+<div class="prose prose-sm sm:prose-sm md:prose-lg min-w-full">
+<nav class="flex items-center gap-2">
+  {% if page.collection == "news" %}
+  <a class="text-blue-600 hover:underline" href="/news/">News</a>
+  {% else %}
+  <a class="text-blue-600 hover:underline" href="/blog/">Blog</a>
+  {% endif %}
+  <span class="text-gray-400">/</span>
+  <span class="text-gray-800 font-semibold">{{ page.title }}</span>
+</nav>
+
+<article class="mx-auto w-full px-0 py-8 flex flex-col space-y-4">
+
+  <!-- Post meta container -->
+  <div class="relative overflow-hidden py-3 px-2 md:px-3 rounded-tl-lg rounded-tr-lg mb-0 border border-gray-200">
+
+    {% if page.background.file %}
+    <div
+      class="absolute inset-0 -z-10 rounded-tl-lg rounded-tr-lg"
+      style="
+      background-image: url('{{ page.background.file }}');
+      background-size: {{ page.background.size | default: 'cover' }};
+      background-repeat: no-repeat;
+      background-position: {{ page.background.x | default: '50%' }} {{ page.background.y | default: '50%' }};
+      opacity: {{ page.background.opacity | default: 0.8 }};
+      {% if page.background.blur %}
+      filter: blur({{ page.background.blur | times: 10 }}px);
+      {% endif %}
+    ">
+    </div>
+    {% else %}
+    <div class="absolute inset-0 -z-10 bg-gray-100 rounded-tl-lg rounded-tr-lg"></div>
+    {% endif %}
+
+    <div class="relative flex flex-col gap-4">
+      <!-- Published / Updated Date -->
+      <span class="text-gray-800 text-sm flex flex-wrap mx-auto md:mx-0 items-center space-x-2">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if page.last_modified_at %}
+        <span>•</span>
+        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+          Updated {{ page.last_modified_at | date: "%B %-d, %Y" }}
+        </time>
+        {% endif %}
+      </span>
+
+      <!-- Title -->
+      <h1 class="wrap-break-word text-left">{{ page.title }}</h1>
+
+      {% if page.tags and page.tags.size > 0 %}
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-1 sm:gap-2 text-sm md:text-base justify-center md:justify-start">
+        {% for tag in page.tags %}
+        <span class="bg-gray-700 text-white px-2 py-1 rounded">
+        {{ tag }}
+      </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Post content -->
+  <div class="px-1 md:px-4 pt-6! max-w-full border-x border-b rounded-b-lg border-b-gray-200 border-x-gray-200">
+    {{ content }}
+  </div>
+
+</article>
+</div>

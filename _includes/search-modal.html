@@ -1,0 +1,43 @@
+<!-- Search Modal -->
+<div class="fixed inset-0 z-50 hidden bg-black/40 flex items-start justify-center pt-24" id="search-modal">
+
+  <div class="modal-animate bg-white w-full max-w-2xl mx-4 rounded-lg shadow-lg overflow-hidden">
+
+    <!-- Search Box -->
+    <div class="border-b p-4">
+      <div class="relative">
+
+        <input
+          class="w-full outline-none text-lg pr-8"
+          id="search-input"
+          placeholder="Type to start searching"
+          type="text"
+        >
+
+        <button
+          class="hover:cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-gray-700 hover:text-gray-800 hidden"
+          id="search-clear"
+          type="button"
+        >
+          <svg class="size-5"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.5"
+               viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="h-[376px] overflow-y-auto rounded-b-lg">
+      <div class="p-4 h-full flex items-center justify-center" id="search-results">
+        <p class="text-sm text-gray-500 text-center">Start typing to search...</p>
+      </div>
+    </div>
+  </div>
+</div>

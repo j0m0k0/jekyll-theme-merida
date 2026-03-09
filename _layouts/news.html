@@ -1,0 +1,35 @@
+---
+layout: base
+---
+<div class="prose min-w-full">
+  {{ content }}
+  <div>
+  <ul class="pl-0 divide-y divide-gray-200">
+    {% assign sorted_news = site.news | sort: "date" | reverse %}
+    {% for news in sorted_news %}
+    <li class="px-2 py-2 even:bg-gray-100 my-0! text-center sm:text-left flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-4">
+      <!-- Date column -->
+      <time class="min-w-32 flex-shrink-0 text-sm">
+        {{ news.date | date: "%b %d, %Y" }}
+      </time>
+
+      <!-- Description column -->
+      <div class="flex-1 min-w-0">
+        {% if news.description %}
+        <p class="truncate font-bold">
+          {{ news.description }}
+        </p>
+        {% endif %}
+      </div>
+
+      <!-- Read more column -->
+      {% if news.content and news.content != "" %}
+      <div class="flex-shrink-0 mt-2 sm:mt-0">
+        <a class="text-blue-600 hover:underline" href="{{ news.url }}">[more]</a>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</div>

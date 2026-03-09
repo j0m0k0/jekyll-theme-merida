@@ -1,0 +1,8 @@
+.idea/
+.jekyll-cache/
+_site/
+_designs/
+node_modules/
+DESIGN.md
+.DS_Store
+

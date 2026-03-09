@@ -1,0 +1,46 @@
+---
+layout: base
+---
+
+<div class="prose min-w-full">
+  {{ content }}
+
+  <section class="w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for post in site.posts %}
+      <article class="border border-border-main rounded-lg p-6 flex flex-col h-full">
+
+        <!-- Main content (title + date) -->
+        <div class="flex flex-col flex-1">
+          <a class="mb-2" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+
+          <div class="text-gray-500">
+            <time class="text-sm" datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%B %-d, %Y" }}
+            </time>
+          </div>
+        </div>
+
+        <!-- Tags (first 3 only) -->
+        <div class="flex flex-wrap gap-2 mt-3 min-h-[1.5rem]">
+          {% if post.tags %}
+          {% assign limited_tags = post.tags | slice: 0, 3 %}
+          {% for tag in limited_tags %}
+          <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">
+            {{ tag }}
+          </span>
+          {% endfor %}
+          {% else %}
+          <!-- empty spacer to preserve height -->
+          <span class="invisible px-2 py-1 rounded text-xs">empty</span>
+          {% endif %}
+        </div>
+
+      </article>
+      {% endfor %}
+
+    </div>
+  </section>
+</div>

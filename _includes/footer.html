@@ -1,0 +1,22 @@
+<footer class=" border-border-main border-t-1 bg-gray-200 text-gray-700" data-pagefind-ignore>
+  <div class="max-w-theme mx-auto px-1 md:px-4 lg:px-0 py-1 flex flex-col md:flex-row justify-between items-center">
+
+    <!-- Left side -->
+    <p class="text-sm mb-0! sm:text-left text-center">&copy; {{ "now" | date: "%Y" }} <a class="text-primary" href="{{ site.url }}{{ site.baseurl }}" target="_blank">{{ site.title }}</a>. Powered by <a class="text-primary" href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a class="text-primary" href="https://javadkoushyar.com/merida" target="_blank">Merida</a> theme.</p>
+
+    <!-- Right side / links -->
+    <div class="flex space-x-4 mt-4 md:mt-0 font-medium! text-sm">
+      <a class="hover:text-blue-500 transition-colors" href="/">About</a>
+      <!-- Social links from _data/social.yml -->
+      {% for social in site.data.social.items %}
+      <a class="hover:text-blue-500 transition-colors"
+         href="{{ social.url }}"
+         rel="noopener noreferrer"
+      >
+        {{ social.name }}
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</footer>

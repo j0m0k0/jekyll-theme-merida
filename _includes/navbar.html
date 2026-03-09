@@ -1,0 +1,67 @@
+{% unless page.nav_exclude %}
+<nav class="sticky top-0 z-50 bg-gray-800 border-b border-blue-100" data-pagefind-ignore>
+  <div class="px-6 xl:px-0 max-w-theme mx-auto">
+
+    <div class="flex items-center justify-between py-2">
+
+      <!-- Hamburger Button -->
+      <button class="hover:cursor-pointer md:hidden rounded text-4xl" id="menu-btn">
+        <svg class="size-10 stroke-blue-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-6">
+        {% for item in site.data.menu.items %}
+        <li>
+          <a class="p-2 rounded text-white hover:text-blue-300 {% if item.url == page.url %}bg-blue-500 hover:text-white  {% endif %}"
+             href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+
+        <!-- Search Icon -->
+        <li>
+          <button class="search-open flex items-center gap-2 p-2 rounded text-white hover:text-blue-300 hover:cursor-pointer">
+            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Search
+          </button>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul class="hidden flex-col space-y-2 pb-4 md:hidden" id="mobile-menu">
+      {% for item in site.data.menu.items %}
+      <li>
+        <a class="block p-2 rounded text-white hover:text-blue-300 {% if item.url == page.url %}bg-blue-500 hover:text-white {% endif %}"
+           href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+      </li>
+      {% endfor %}
+
+      <!-- Search -->
+      <li>
+        <button class="text-white search-open flex items-center gap-2 p-2 rounded text-black hover:text-blue-500 hover:cursor-pointer">
+          <svg class=" size-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Search
+        </button>
+      </li>
+    </ul>
+
+
+  </div>
+
+  {% include search-modal.html %}
+
+  </nav>
+{% endunless %}

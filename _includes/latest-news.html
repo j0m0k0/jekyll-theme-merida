@@ -1,0 +1,18 @@
+<!-- Displays the latest news as a list -->
+<ul class="prose pl-0 sm:pl-6 space-y-4">
+  {% assign sorted_news = site.news | sort: "date" | reverse %}
+  {% for news in sorted_news limit:5 %}
+  <li class="flex flex-row gap-4 sm:gap-6">
+    <time class="font-bold min-w-32">{{ news.date | date: "%b %d, %Y" }}</time>
+    <!-- Title always plain text -->
+    <p class="not-prose mb-0! truncate">
+      {{ news.description }}
+
+      <!-- Only add [more] if news has content -->
+      {% if news.content and news.content != "" %}
+      <a class="ml-1 text-blue-600 hover:underline" href="{{ news.url }}">[more]</a>
+      {% endif %}
+    </p>
+  </li>
+  {% endfor %}
+</ul>

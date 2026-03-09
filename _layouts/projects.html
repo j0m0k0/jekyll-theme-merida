@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<div class="prose max-w-full ">
+  {{ content }}
+  <div class="{% if content != "" %}mt-16{% endif %}">
+  <ul class="divide-y divide-border-main pl-0!">
+    {% assign sorted_repos = site.data.repos.items | sort: "date" | reverse %}
+    {% for repo in sorted_repos %}
+    <li class="not-prose flex flex-col sm:flex-row sm:items-center py-6 last:pb-0 gap-0 sm:gap-4">
+      <!-- Date column -->
+      <time class="min-w-[100px] max-w-[100px] flex-shrink-0 text-sm!">
+        {{ repo.date | date: "%b %d, %Y" }}
+      </time>
+      {% if repo.host %}
+      <a class="mb-0! min-w-[200px] max-w-[200px] font-bold! truncate sm:text-center" href="{{ repo.host }}/{{ repo.user_name }}/{{ repo.repo_name}}">
+        {{ repo.name }}
+      </a>
+      {% endif %}
+
+      <p class="not-prose mb-0! truncate grow">
+        {{ repo.description }}
+      </p>
+      <img alt="GitHub Repo stars" class="not-prose w-[100px] min-w-[100px] mt-1 sm:mt-0 h-auto" src="https://img.shields.io/github/stars/{{ repo.user_name }}/{{ repo.repo_name }}?style=flat-square&cacheSeconds=3600">
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+

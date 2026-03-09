@@ -1,0 +1,21 @@
+items:
+  - name: Project Alpha
+    description: Linux Kernel by Legendary Linus Torvalds
+    date: 2020-05-19
+    user_name: torvalds
+    repo_name: linux
+    host: https://github.com/
+
+  - name: Project Beta
+    description: Python black formatter
+    date: 2023-05-07
+    user_name: python
+    repo_name: black
+    host: https://github.com/
+
+  - name: Project Gamma
+    description: The cute numpy
+    date: 2024-05-13
+    user_name: numpy
+    repo_name: numpy
+    host: https://github.com/
