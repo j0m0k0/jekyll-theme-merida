@@ -32,4 +32,4 @@ jobs:
           cp -r theme/_posts starter/_posts
           cp -r theme/assets starter/assets
           cp -r theme/downloads starter/downloads
-          cp theme/_config.yaml starter/_config.yaml
+          cp theme/_config.yml starter/_config.yml
