@@ -33,3 +33,16 @@ jobs:
           cp -r theme/assets starter/assets
           cp -r theme/downloads starter/downloads
           cp theme/_config.yml starter/_config.yml
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.MERIDA_STARTER_SYNC_TOKEN }}
+          path: starter
+          branch: sync-from-theme
+          commit-message: Sync merida-starter files from jekyll-theme-merida
+          title: Sync merida-starter files from jekyll-theme-merida
+          body: |
+            This PR syncs starter files from the jekyll-theme-merida repository.
+          base: main
+
