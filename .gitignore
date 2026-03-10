@@ -5,4 +5,4 @@ _designs/
 node_modules/
 DESIGN.md
 .DS_Store
-
+*.gem
