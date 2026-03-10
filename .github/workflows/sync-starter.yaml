@@ -36,11 +36,15 @@ jobs:
 
       - name: Create the Gemfile for starter
         run: |
-          touch starter/Gemfile
-          echo '# frozen_string_literal: true\n' >> starter/Gemfile
-          echo 'source "https://rubygems.org"\n' >> starter/Gemfile
-          echo 'gem "jekyll-theme-merida", "~> 0.0"\n' >> starter/Gemfile
+          cat > starter/Gemfile.new <<'EOF'
+          # frozen_string_literal: true
+          source "https://rubygems.org"
 
+          gem "jekyll-theme-merida", "~> 0.0"
+          EOF
+
+          mv starter/Gemfile.new starter/Gemfile
+          
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
