@@ -1,9 +1,10 @@
 name: Sync starter repo
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [ published ]
+  workflow_dispatch:
+
 jobs:
   move-files:
     runs-on: ubuntu-latest
@@ -44,7 +45,7 @@ jobs:
           EOF
 
           mv starter/Gemfile.new starter/Gemfile
-          
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
