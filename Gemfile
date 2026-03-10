@@ -1,10 +1,6 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'jekyll'
-gem 'webrick'
-gem "jekyll-tailwind", group: [:jekyll_plugins]
-gem 'rouge'
-gem "jekyll-last-modified-at"
-gem 'jekyll-scholar'
-gem 'jekyll-sitemap'
-gem 'jekyll-feed'
+source "https://rubygems.org"
+gemspec
+
+
