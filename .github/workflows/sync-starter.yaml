@@ -1,98 +1,36 @@
 name: Sync starter repo
 
 on:
-  release:
-    types: [ published ]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
+  push:
+    branches:
+      - main
 jobs:
-  sync-starter:
+  move-files:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout theme repo
-        uses: actions/checkout@v4
+      - name: Checkout jekyll-theme-merida repo
+        uses: actions/checkout@v6
         with:
-          fetch-depth: 0
+          path: theme
 
-      - name: Checkout starter repo
-        uses: actions/checkout@v4
+      - name: Checkout merida-starter repo
+        uses: actions/checkout@v6
         with:
           repository: j0m0k0/merida-starter
+          path: starter
           token: ${{ secrets.MERIDA_STARTER_SYNC_TOKEN }}
-          path: merida-starter
-          fetch-depth: 0
 
-      - name: Set sync metadata
-        id: meta
-        shell: bash
+      - name: Copy selected files to starter
         run: |
-          if [ "${{ github.event_name }}" = "release" ]; then
-            VERSION="${{ github.event.release.tag_name }}"
-          else
-            VERSION="manual-sync-$(date +%Y%m%d-%H%M%S)"
-          fi
-
-          BRANCH="sync/starter-${VERSION}"
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
-
-      - name: Sync managed files
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          DEST="merida-starter"
-
-          # Remove only paths managed by automation
-          rm -rf "$DEST/_layouts"
-          rm -rf "$DEST/_includes"
-          rm -rf "$DEST/_sass"
-          rm -rf "$DEST/assets"
-          rm -rf "$DEST/_tabs"
-          rm -rf "$DEST/_plugins"
-
-          # Copy managed paths if they exist
-          [ -d "_layouts" ] && cp -R "_layouts" "$DEST/"
-          [ -d "_includes" ] && cp -R "_includes" "$DEST/"
-          [ -d "_sass" ] && cp -R "_sass" "$DEST/"
-          [ -d "assets" ] && cp -R "assets" "$DEST/"
-          [ -d "_tabs" ] && cp -R "_tabs" "$DEST/"
-          [ -d "_plugins" ] && cp -R "_plugins" "$DEST/"
-
-          # Copy selected root files
-          [ -f "_config.yml" ] && cp "_config.yml" "$DEST/"
-          [ -f "Gemfile" ] && cp "Gemfile" "$DEST/"
-          [ -f "index.html" ] && cp "index.html" "$DEST/"
-
-          # Optional metadata file for traceability
-          cat > "$DEST/.merida-sync-source" <<EOF
-          source_repo=${{ github.repository }}
-          source_sha=${{ github.sha }}
-          source_ref=${{ github.ref }}
-          version=${{ steps.meta.outputs.version }}
-          synced_at=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          EOF
-
-      - name: Create pull request in starter repo
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.MERIDA_STARTER_SYNC_TOKEN }}
-          path: merida-starter
-          commit-message: "chore: sync from jekyll-theme-merida ${{ steps.meta.outputs.version }}"
-          branch: ${{ steps.meta.outputs.branch }}
-          delete-branch: true
-          title: "chore: sync from jekyll-theme-merida ${{ steps.meta.outputs.version }}"
-          body: |
-            Automated sync from `${{ github.repository }}`.
-
-            Source version: `${{ steps.meta.outputs.version }}`
-            Source ref: `${{ github.ref }}`
-            Source sha: `${{ github.sha }}`
-          base: main
-          labels: |
-            automated
-            starter-sync
+          cp -r theme/_bibliography starter/_bibliography
+          cp -r theme/_data starter/_data
+          cp -r theme/_includes starter/_includes
+          cp -r theme/_layouts starter/_layouts
+          cp -r theme/_news starter/_news
+          cp -r theme/_pages starter/_pages
+          cp -r theme/_plugins starter/_plugins
+          cp -r theme/_posts starter/_posts
+          cp -r theme/assets starter/assets
+          cp -r theme/downloads starter/downloads
+          cp -r theme/_sass starter/_sass
+          cp theme/_config.yaml starter/_config.yaml
