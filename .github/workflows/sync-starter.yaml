@@ -38,9 +38,9 @@ jobs:
         run: |
           touch starter/Gemfile
           echo '# frozen_string_literal: true\n' >> starter/Gemfile
-          echo 'source "https://rubygems.org"\n'
-          echo 'gem "jekyll-theme-merida", "~> 0.0"\n'
-          
+          echo 'source "https://rubygems.org"\n' >> starter/Gemfile
+          echo 'gem "jekyll-theme-merida", "~> 0.0"\n' >> starter/Gemfile
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
