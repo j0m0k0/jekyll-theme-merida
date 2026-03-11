@@ -1,3 +1,8 @@
+# Sync the merida-starter repo with this repo automatically
+
+# Inspired by chirpy-starter workflow and the following post by Natalie Somersall
+# https://some-natalie.dev/blog/multi-repo-actions/
+
 name: Sync starter repo
 
 on:
