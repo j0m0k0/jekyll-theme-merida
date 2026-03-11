@@ -30,8 +30,6 @@ jobs:
         run: |
           cp -r theme/_bibliography starter/_bibliography
           cp -r theme/_data starter/_data
-          cp -r theme/_includes starter/_includes
-          cp -r theme/_layouts starter/_layouts
           cp -r theme/_news starter/_news
           cp -r theme/_pages starter/_pages
           cp -r theme/_plugins starter/_plugins
