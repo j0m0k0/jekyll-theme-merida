@@ -4,6 +4,13 @@
 
 @import "tailwindcss";
 
+@source "../../_drafts/**/*.html";
+@source "../../_includes/**/*.html";
+@source "../../_layouts/**/*.html";
+@source "../../_news/**/*.html";
+@source "../../_pages/**/*.html";
+@source "../../_posts/**/*.html";
+
 @plugin "@tailwindcss/typography";
 
 @theme {
