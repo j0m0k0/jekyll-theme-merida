@@ -23,7 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.4"
   spec.add_runtime_dependency "webrick", "~> 1.9"
-  spec.add_runtime_dependency "jekyll-tailwind", "~> 2.1"
   spec.add_runtime_dependency "rouge", "~> 4.7"
   spec.add_runtime_dependency "jekyll-last-modified-at", "~> 1.3"
   spec.add_runtime_dependency "jekyll-scholar", "~> 7.3"
