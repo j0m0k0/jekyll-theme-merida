@@ -1,12 +1,14 @@
 {
   "name": "merida",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
+    "css:build": "npx @tailwindcss/cli -i ./assets/css/app.src.css -o ./assets/css/app.css --minify",
     "css:watch": "npx @tailwindcss/cli -i ./assets/css/app.src.css -o ./assets/css/app.css --watch",
     "jekyll:serve": "bundle exec jekyll serve --livereload --force_polling",
-    "dev": "concurrently \"npm:css:watch\" \"npm:jekyll:serve\""
+    "dev": "concurrently \"npm:css:watch\" \"npm:jekyll:serve\"",
+    "release:gem": "bash ./tools/release-gem.sh"
   },
   "keywords": [],
   "author": "",

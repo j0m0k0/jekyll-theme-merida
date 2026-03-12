@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
+package_json = File.read(File.expand_path("package.json", __dir__))
+version_match = package_json.match(/"version"\s*:\s*"([^"]+)"/)
+
+abort("Could not read version from package.json") unless version_match
+
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-merida"
-  spec.version       = "0.0.1"
+  spec.version       = version_match[1]
   spec.authors       = ["Javad Mokhtari Koushyar"]
   spec.email         = ["javadmokhtari@outlook.com"]
 
