@@ -5,6 +5,8 @@ version_match = package_json.match(/"version"\s*:\s*"([^"]+)"/)
 
 abort("Could not read version from package.json") unless version_match
 
+files = `git ls-files -z`.split("\x0")
+
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-merida"
   spec.version       = version_match[1]
@@ -15,7 +17,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/j0m0k0/jekyll-theme-merida"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files = files
+    .select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+    .reject { |f| f == "assets/css/app.src.css" }
 
   spec.add_runtime_dependency "jekyll", "~> 4.4"
   spec.add_runtime_dependency "webrick", "~> 1.9"

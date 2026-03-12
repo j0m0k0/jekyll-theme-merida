@@ -28,15 +28,35 @@ jobs:
 
       - name: Copy selected files to starter
         run: |
-          cp -r theme/_bibliography starter/_bibliography
-          cp -r theme/_data starter/_data
-          cp -r theme/_news starter/_news
-          cp -r theme/_pages starter/_pages
-          cp -r theme/_plugins starter/_plugins
-          cp -r theme/_posts starter/_posts
-          cp -r theme/assets starter/assets
-          cp -r theme/downloads starter/downloads
-          cp theme/_config.yml starter/_config.yml
+          rm -rf \
+            starter/_bibliography \
+            starter/_data \
+            starter/_news \
+            starter/_pages \
+            starter/_plugins \
+            starter/_posts \
+            starter/downloads
+
+          mkdir -p \
+            starter/_bibliography \
+            starter/_data \
+            starter/_news \
+            starter/_pages \
+            starter/_plugins \
+            starter/_posts \
+            starter/downloads
+
+          cp -R theme/_bibliography/. starter/_bibliography
+          cp -R theme/_data/. starter/_data
+          cp -R theme/_news/. starter/_news
+          cp -R theme/_pages/. starter/_pages
+          cp -R theme/_plugins/. starter/_plugins
+          cp -R theme/_posts/. starter/_posts
+          cp -R theme/downloads/. starter/downloads
+          {
+            printf '%s\n' 'theme: jekyll-theme-merida'
+            cat theme/_config.yml
+          } > starter/_config.yml
 
       - name: Create the Gemfile for starter
         run: |
@@ -60,4 +80,3 @@ jobs:
           body: |
             This PR syncs starter files from the jekyll-theme-merida repository.
           base: main
-
