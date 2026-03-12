@@ -1,0 +1,220 @@
+/* Overrides of Tailwind Theme */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+@import "tailwindcss";
+
+@source "../../_drafts/**/*.html";
+@source "../../_includes/**/*.html";
+@source "../../_layouts/**/*.html";
+@source "../../_news/**/*.html";
+@source "../../_pages/**/*.html";
+@source "../../_posts/**/*.html";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Source Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-gilda: "Gilda Display";
+  --font-main: var(--font-sans);
+  --color-border-main: var(--color-gray-400);
+  --color-primary: var(--color-blue-600);
+}
+
+.max-w-theme {
+  @apply max-w-6xl;
+}
+
+/* ************************************************************** */
+
+/* Styles of basic HTML elements */
+html {
+  @apply overflow-y-scroll;
+}
+
+em:not(li *) {
+  @apply block text-center
+}
+
+img:has(+ em) {
+  @apply mb-0;
+}
+
+
+.manual-h1 {
+  @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl;
+}
+
+/* Task List Styling — checkboxes visible, bullets removed, checked items green */
+ul.task-list {
+  @apply list-none p-0 m-0 space-y-2;
+  /* remove bullets, vertical spacing */
+}
+
+ul.task-list li {
+  @apply flex items-center;
+  /* align checkbox and text */
+}
+
+ul.task-list li input[type="checkbox"] {
+  @apply mr-2;
+  /* spacing between checkbox and text */
+}
+
+/* Make checked tasks green */
+ul.task-list li input[type="checkbox"]:checked + * {
+  @apply text-green-600 font-medium;
+}
+
+.main a {
+  @apply text-primary;
+  @apply no-underline;
+}
+
+/* All tables except ones inside .highlight */
+
+.main table:not(.highlight table) {
+  @apply border-collapse border border-gray-200 text-left mb-4 min-w-full;
+
+  caption {
+    @apply text-sm font-semibold mb-2;
+  }
+
+  thead {
+    @apply bg-gray-100;
+  }
+
+  th {
+    @apply px-4 py-2 border-b border-gray-300 font-medium text-gray-700;
+  }
+
+  td {
+    @apply px-4 py-2 border-b border-gray-200 text-gray-600;
+  }
+
+  tbody tr:hover {
+    @apply bg-gray-50;
+  }
+
+  /* Optional: for color swatches or inner divs */
+
+  td div[data-theme] {
+    @apply w-12 aspect-square border border-gray-300;
+  }
+}
+
+.table-wrapper {
+  @apply overflow-x-auto mb-4;
+}
+
+/* ************************************************************** */
+
+/* Code Highlighting styles */
+:not(pre) > code {
+  @apply text-gray-600;
+  @apply bg-blue-50;
+  @apply px-1.5;
+  @apply py-0.5;
+  @apply rounded;
+  @apply font-light;
+  @apply font-main;
+}
+
+/* ************************************************************** */
+
+/* Code Highlighting styles */
+:not(pre) > code {
+  @apply text-gray-600;
+  @apply bg-blue-50;
+  @apply px-1.5;
+  @apply py-0.5;
+  @apply rounded;
+  @apply font-light;
+  @apply font-main;
+}
+
+/*
+    adds rounded corners, padding syntax and horizontal scroll bar to the code block
+    author: epigone707
+*/
+pre.highlight {
+  padding: 7px;
+  /* cause a scrolling mechanism to be provided for overflowing boxes */
+  overflow-x: auto;
+}
+
+figure.highlight > pre {
+  padding: 7px;
+  overflow-x: auto;
+}
+
+/* Default highlight spacing */
+.highlight {
+  border-radius: 5px;
+  @apply mb-2;
+  margin-top: 1rem; /* default */
+}
+
+/* Remove top margin if the highlight's parent is inside highlighter-rouge
+   AND the highlighter-rouge div is immediately after a paragraph */
+p + .highlighter-rouge .highlight {
+  @apply mt-0;
+}
+
+.rouge-gutter {
+  @apply border-r border-gray-300 pr-2;
+}
+
+.rouge-code pre {
+  @apply pl-2;
+  /* optional: spacing so code doesn’t touch line */
+}
+
+.language-plaintext.highlighter-rouge {
+  position: relative; /* make outer div relative */
+}
+
+.language-plaintext.highlighter-rouge pre.highlight {
+  position: static; /* remove relative from inner pre */
+}
+
+/* for making copy button accessible in mobile and tablet */
+.copy-button {
+  touch-action: manipulation; /* ensures the tap is recognized */
+  z-index: 10; /* above everything */
+}
+
+/* ************************************************************** */
+
+/* Styles for Bibliography */
+.bibliography {
+  @apply pl-0!;
+}
+
+.bibliography li {
+  @apply list-none!;
+}
+
+/* ************************************************************** */
+
+/* Search utility styles */
+
+@keyframes modal-overshoot {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-animate {
+  animation: modal-overshoot 150ms ease-out;
+}
+

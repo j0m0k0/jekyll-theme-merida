@@ -4,18 +4,17 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css:watch": "npx @tailwindcss/cli -i ./assets/css/app.src.css -o ./assets/css/app.css --watch",
+    "jekyll:serve": "bundle exec jekyll serve --livereload --force_polling",
+    "dev": "concurrently \"npm:css:watch\" \"npm:jekyll:serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.2.1",
+  "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.4.27",
-    "cssnano": "^7.1.2",
-    "postcss": "^8.5.6",
+    "concurrently": "^9.2.1",
     "tailwindcss": "^4.2.1"
   }
 }
