@@ -49,4 +49,11 @@ exclude:
   - README.md
   - DESIGN.md
   - tailwind_enabler.css
+  - CHANGELOG.md
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - LICENSE
+  - "*.config.js"
+  - "package*.json"
 
