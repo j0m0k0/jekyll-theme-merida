@@ -1,10 +1,27 @@
 items:
-  - name: Project Alpha
+  - name: Linux
     description: Linux Kernel by Legendary Linus Torvalds
     date: 2020-05-19
     user_name: torvalds
     repo_name: linux
     host: https://github.com/
+    category: "Open Source Projects"
+
+  - name: Python Black
+    description: Python black formatter
+    date: 2023-05-07
+    user_name: python
+    repo_name: black
+    host: https://github.com/
+    category: "Open Source Projects"
+
+  - name: Numpy
+    description: Added the matrix multiplication algorithm
+    date: 2024-05-13
+    user_name: numpy
+    repo_name: numpy
+    host: https://github.com/
+    category: "Open Source Contributions"
 
   - name: Project Beta
     description: Python black formatter
@@ -12,10 +29,14 @@ items:
     user_name: python
     repo_name: black
     host: https://github.com/
+    category: "Course Projects"
 
   - name: Project Gamma
-    description: The cute numpy
+    description: Added the matrix multiplication algorithm
     date: 2024-05-13
     user_name: numpy
     repo_name: numpy
     host: https://github.com/
+    category: "Course Projects"
+
+orders: [ "Open Source Projects", "Course Projects", "Open Source Contributions" ]
