@@ -3,8 +3,9 @@ layout: about
 title: "About Me"
 permalink: /
 profile:
-  image: profile_pic.jpg
-  caption: Photo by Mostafa KordZangeneh, Unsplash
+  image: profile_photo.jpg
+  alt: Photo by Vicky Hladynets, Unsplash
+  caption: Photo by <a href="https://unsplash.com/@vhladynets" target="_blank">Vicky Hladynets</a>, <a href="https://unsplash.com/" target="_blank">Unsplash</a>
 latest_posts:
   enabled: true
 latest_news:
