@@ -6,6 +6,8 @@ version_match = package_json.match(/"version"\s*:\s*"([^"]+)"/)
 abort("Could not read version from package.json") unless version_match
 
 files = `git ls-files -z`.split("\x0")
+compiled_css = "assets/css/merida.css"
+source_css = "assets/css/merida.src.css"
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-merida"
@@ -19,7 +21,9 @@ Gem::Specification.new do |spec|
 
   spec.files = files
     .select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
-    .reject { |f| f == "assets/css/app.src.css" }
+    .reject { |f| f == source_css }
+  spec.files << compiled_css if File.exist?(compiled_css)
+  spec.files.uniq!
 
   spec.add_runtime_dependency "jekyll", "~> 4.4"
   spec.add_runtime_dependency "webrick", "~> 1.9"

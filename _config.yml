@@ -49,5 +49,4 @@ exclude:
   - LICENSE
   - "*.config.js"
   - "package*.json"
-  - assets/css/app.src.css
-
+  - assets/css/merida.src.css
