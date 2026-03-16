@@ -5,7 +5,11 @@
 
   <!-- Title -->
   <h2 class="mt-2! mb-0! text-center!">
+    {% if entry.url %}
+    <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+    {% else %}
     {{ entry.title }}
+    {% endif %}
   </h2>
 
   <!-- Venue / Conference / Journal -->
@@ -41,16 +45,16 @@
   <!-- Links -->
   <div class="flex flex-wrap gap-3 text-sm justify-center">
     {% if entry.url %}
-    <a class=" border border-border-main px-2 bg-blue-50" href="{{ entry.url }}">Paper</a>
+    <a class="prose px-2 text-[#55A194]! bg-[#EEF5F4] hover:bg-[#DDECE9]" href="{{ entry.url }}">Paper</a>
     {% endif %}
     {% if entry.code %}
-    <a class=" text-green-500! border border-border-main px-2 bg-green-50" href="{{ entry.code }}">Code</a>
+    <a class=" prose text-[#F16A6F]! px-2 bg-[#FDF0F0] hover:bg-[#FCE1E2]" href="{{ entry.code }}">Code</a>
     {% endif %}
     {% if entry.slides %}
-    <a class=" text-violet-500! border border-border-main px-2 bg-violet-50" href="{{ entry.slides }}">Slides</a>
+    <a class=" prose text-violet-500! px-2 bg-violet-100 hover:bg-violet-200" href="{{ entry.slides }}">Slides</a>
     {% endif %}
     {% if entry.bibtex %}
-    <button class="hover:cursor-pointer border border-border-main px-2 bg-gray-50 bibtex-toggle" type="button">BibTeX</button>
+    <button class="prose hover:cursor-pointer px-2 bg-gray-100 hover:bg-gray-200 bibtex-toggle" type="button">BibTeX</button>
     {% endif %}
   </div>
 
