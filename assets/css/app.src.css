@@ -1,6 +1,5 @@
 /* Overrides of Tailwind Theme */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 
 @import "tailwindcss";
 
@@ -121,17 +120,8 @@ ul.task-list li input[type="checkbox"]:checked + * {
   @apply font-main;
 }
 
-/* ************************************************************** */
-
-/* Code Highlighting styles */
-:not(pre) > code {
-  @apply text-gray-600;
-  @apply bg-blue-50;
-  @apply px-1.5;
-  @apply py-0.5;
-  @apply rounded;
-  @apply font-light;
-  @apply font-main;
+:not(pre) > code:before, :not(pre) > code:after {
+  content: "";
 }
 
 /*
