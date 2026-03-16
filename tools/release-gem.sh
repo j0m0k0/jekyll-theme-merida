@@ -41,7 +41,7 @@ if curl --silent --fail "https://rubygems.org/api/v1/versions/$GEM_NAME.json" \
 fi
 
 echo "Building Tailwind CSS..."
-npx @tailwindcss/cli -i ./assets/css/app.src.css -o ./assets/css/app.css --minify
+npx @tailwindcss/cli -i ./assets/css/merida.src.css -o ./assets/css/merida.css --minify
 
 echo "Preparing _config.yml for gem build..."
 {
