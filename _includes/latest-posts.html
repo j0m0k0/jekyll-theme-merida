@@ -1,5 +1,5 @@
 <!-- Displays the latest posts as a list -->
-<ul class="prose pl-0 sm:pl-6 space-y-4">
+<ul class="prose pl-0 sm:pl-6 space-y-4 min-w-full">
   {% for post in site.posts limit:5 %}
   <li class="flex flex-row gap-4 sm:gap-6">
     <time class="font-bold min-w-32">{{ post.date | date: "%b %d, %Y" }}</time>

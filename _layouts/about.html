@@ -8,10 +8,10 @@ layout: base
     {{ content }}
   </div>
   {% if page.profile %}
-  <div>
+  <div class="md:ml-auto">
     {% if page.profile.image %}
     {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-    <img alt="{{ page.profile.caption }}" class="mx-auto mb-0 mt-5 rounded shrink-0 w-64 h-auto" src="{{ profile_image_path }}"/>
+    <img alt="{{ page.profile.caption }}" class="mx-auto md:mx-0 mb-0 mt-5 rounded shrink-0 w-64 h-auto" src="{{ profile_image_path }}"/>
     {% endif %}
     {% if page.profile.caption %}
     <p class="text-xs! mt-2 text-center text-gray-500">{{ page.profile.caption }}</p>
