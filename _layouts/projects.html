@@ -5,6 +5,7 @@ layout: base
 <div class="prose max-w-full ">
   {{ content }}
   <div class="{% if content != "" %}mt-16{% endif %}">
+  {% if site.data.repos %}
   <ul class="divide-y divide-border-main pl-0!">
     {% assign sorted_repos = site.data.repos.items | sort: "date" | reverse %}
     {% for repo in sorted_repos %}
@@ -26,6 +27,7 @@ layout: base
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
 </div>
 </div>
 
