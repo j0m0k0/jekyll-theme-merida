@@ -19,6 +19,10 @@ collections:
   research:
     output: true
 
+
+footer:
+  show_last_update: true
+
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge

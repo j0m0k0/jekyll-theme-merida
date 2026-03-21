@@ -1,24 +1,29 @@
 <footer class=" border-border-main border-t-1 bg-gray-200 text-gray-700" data-pagefind-ignore>
-  <div class="max-w-theme mx-auto px-1 md:px-4 lg:px-0 py-1 flex flex-col md:flex-row justify-between items-center">
-
-    <!-- Left side -->
-    <p class="text-sm mb-0! sm:text-left text-center">&copy; {{ "now" | date: "%Y" }} <a class="text-primary" href="{{ site.url }}{{ site.baseurl }}" target="_blank">{{ site.title }}</a>. Powered by <a class="text-primary" href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a class="text-primary" href="https://javadkoushyar.com/merida" target="_blank">Merida</a> theme.</p>
-
-    <!-- Right side / links -->
-    <div class="flex space-x-4 mt-4 md:mt-0 font-medium! text-sm">
-      <a class="hover:text-blue-500 transition-colors" href="/">About</a>
-      <!-- Social links from _data/social.yml -->
-      {% if site.data.social %}
-        {% for social in site.data.social.items %}
-        <a class="hover:text-blue-500 transition-colors"
-           href="{{ social.url }}"
-           rel="noopener noreferrer"
-        >
-          {{ social.name }}
-        </a>
-        {% endfor %}
-      {% endif %}
+  <div class="max-w-theme mx-auto px-1 md:px-0 py-4 flex flex-col items-center gap-4">
+    <div class="prose min-w-full text-center md:text-left">
+      <h2 class="mt-0! mb-0!">Thanks for reading!</h2>
     </div>
 
+    <div class="w-full flex flex-col items-center justify-between gap-3 md:flex-row md:gap-6">
+      <p class="my-0! text-sm text-center">&copy; {{ "now" | date: "%Y" }} <a class="text-primary" href="{{ site.url }}{{ site.baseurl }}" target="_blank">{{ site.title }}</a>. Powered by <a class="text-primary" href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a class="text-primary" href="https://javadkoushyar.com/merida" target="_blank">Merida</a> theme.</p>
+
+      <div class="flex flex-col items-center gap-2 font-medium! text-sm md:flex-row md:gap-4">
+        <a class="hover:text-blue-500 transition-colors" href="/">About</a>
+        {% if site.data.social %}
+          {% for social in site.data.social.items %}
+          <a class="hover:text-blue-500 transition-colors"
+             href="{{ social.url }}"
+             rel="noopener noreferrer"
+          >
+            {{ social.name }}
+          </a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+    {% if site.footer and site.footer.show_last_update %}
+      <p class="my-0! w-full text-center md:text-left text-sm">Last updated: {{ site.time | date: "%B %d, %Y" }}</p>
+    {% endif %}
   </div>
 </footer>
