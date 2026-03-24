@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Javad Mokhtari Koushyar"]
   spec.email         = ["javadmokhtari@outlook.com"]
 
-  spec.summary       = "Write a short summary, because Rubygems requires one."
+  spec.summary       = "A minimal, feature-rich theme for Jekyll."
   spec.homepage      = "https://github.com/j0m0k0/jekyll-theme-merida"
   spec.license       = "MIT"
 
