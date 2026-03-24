@@ -2,7 +2,7 @@
 title: We ❤️ Open Source
 date: 2026-02-27
 layout: post
-description: We ❤️ Open Source
+description: We ❤️ Open Source We ❤️ Open Source We ❤️ Open Source
 ---
 
 # The Heart of the Web: Why We Love Open Source

@@ -12,7 +12,7 @@ layout: base
   {% assign group = grouped_repos | where: "name", category_name | first %}
   {% if group %}
   <h2>{{ group.name | default: "Uncategorized" }}</h2>
-  <ul class="divide-y divide-border-main pl-0! bg-gray-50 ">
+  <ul class="divide-y divide-border-main pl-0! bg-[var(--card)] ">
     {% assign sorted_repos = group.items | sort: "date" | reverse %}
     {% for repo in sorted_repos %}
     <li class="not-prose flex flex-col lg:flex-row lg:items-center py-6 gap-0 lg:gap-4 px-6">

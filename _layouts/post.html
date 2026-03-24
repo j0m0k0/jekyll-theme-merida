@@ -9,7 +9,7 @@ layout: base
   <a class="text-blue-600 hover:underline" href="/blog/">Blog</a>
   {% endif %}
   <span class="text-gray-400">/</span>
-  <span class="text-gray-800 font-semibold">{{ page.title }}</span>
+  <span class="font-semibold">{{ page.title }}</span>
 </nav>
 
 <article class="mx-auto w-full px-0 py-8 flex flex-col space-y-4">
@@ -32,12 +32,12 @@ layout: base
     ">
     </div>
     {% else %}
-    <div class="absolute inset-0 -z-10 bg-gray-100 rounded-tl-lg rounded-tr-lg"></div>
+    <div class="absolute inset-0 -z-10 bg-[var(--post-cover)] rounded-tl-lg rounded-tr-lg"></div>
     {% endif %}
 
     <div class="relative flex flex-col gap-4">
       <!-- Published / Updated Date -->
-      <span class="text-gray-800 text-sm flex flex-wrap mx-auto md:mx-0 items-center space-x-2">
+      <span class="text-sm flex flex-wrap mx-auto md:mx-0 items-center space-x-2">
         <time datetime="{{ page.date | date_to_xmlschema }}">
           {{ page.date | date: "%B %-d, %Y" }}
         </time>

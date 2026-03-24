@@ -12,13 +12,180 @@
 
 @plugin "@tailwindcss/typography";
 
+:root {
+  --border-main: var(--color-gray-400);
+  --navbar-bg: var(--color-gray-800);
+  --text: var(--color-black);
+  --text-bold: var(--color-gray-900);
+  --modal: var(--color-white);
+  --foter: var(--color-gray-200);
+  --tag: var(--color-gray-200);
+  --tag-text: var(--color-gray-700);
+  --post-cover: var(--color-gray-100);
+  --card: var(--color-gray-50);
+  --bibtext: var(--color-neutral-200);
+  --table-header: var(--color-black);
+  --table-header-bg: var(--color-gray-100);
+  --table-text: var(--color-gray-700);
+  --table-row-hover: var(--color-gray-50);
+  --search-row-hover: var(--color-gray-100);
+  --search-bar-bg: var(--color-gray-200);
+  --time: var(--color-gray-100);
+}
+
+html[data-theme="light"] {
+  --border-main: var(--color-gray-400);
+  --navbar-bg: var(--color-gray-800);
+  --text: var(--color-black);
+  --text-bold: var(--color-gray-900);
+  --modal: var(--color-white);
+  --foter: var(--color-gray-200);
+  --tag: var(--color-gray-200);
+  --tag-text: var(--color-gray-700);
+  --post-cover: var(--color-gray-100);
+  --card: var(--color-gray-50);
+  --bibtext: var(--color-neutral-200);
+  --table-header: var(--color-black);
+  --table-header-bg: var(--color-gray-100);
+  --table-text: var(--color-gray-700);
+  --table-row-hover: var(--color-gray-50);
+  --search-row-hover: var(--color-gray-100);
+  --search-bar-bg: var(--color-gray-200);
+  --time: var(--color-gray-100);
+
+  .main a {
+    @apply text-primary;
+  }
+
+  :not(pre) > code {
+    @apply text-gray-600;
+    @apply bg-blue-50;
+  }
+
+
+}
+
+html[data-theme="dark"] {
+  --border-main: var(--color-gray-600);
+  --navbar-bg: var(--color-gray-800);
+  --text: var(--color-white);
+  --text-bold: var(--color-gray-200);
+  --modal: var(--color-gray-800);
+  --foter: var(--color-gray-700);
+  --tag: var(--color-gray-700);
+  --tag-text: var(--color-gray-200);
+  --post-cover: var(--color-gray-900);
+  --card: var(--color-gray-800);
+  --bibtext: var(--color-neutral-500);
+  --table-header: var(--color-white);
+  --table-header-bg: var(--color-gray-700);
+  --table-text: var(--color-gray-100);
+  --table-row-hover: var(--color-gray-600);
+  --search-row-hover: var(--color-gray-700);
+  --search-bar-bg: var(--color-gray-700);
+  --time: var(--color-gray-500);
+
+  .main a {
+    @apply text-blue-400;
+  }
+
+  footer a {
+    @apply text-blue-300;
+  }
+
+  :not(pre) > code {
+    @apply text-white;
+    @apply bg-gray-600;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="system"] {
+    --border-main: var(--color-gray-400);
+    --navbar-bg: var(--color-gray-800);
+    --text: var(--color-black);
+    --text-bold: var(--color-gray-900);
+    --modal: var(--color-white);
+    --foter: var(--color-gray-200);
+    --tag: var(--color-gray-200);
+    --tag-text: var(--color-gray-700);
+    --post-cover: var(--color-gray-100);
+    --card: var(--color-gray-50);
+    --bibtext: var(--color-neutral-200);
+    --table-header: var(--color-black);
+    --table-header-bg: var(--color-gray-100);
+    --table-text: var(--color-gray-700);
+    --table-row-hover: var(--color-gray-50);
+    --search-row-hover: var(--color-gray-100);
+    --search-bar-bg: var(--color-gray-200);
+    --time: var(--color-gray-100);
+
+    .main a {
+      @apply text-primary;
+    }
+
+
+    :not(pre) > code {
+      @apply text-gray-600;
+      @apply bg-blue-50;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] {
+    --border-main: var(--color-gray-600);
+    --navbar-bg: var(--color-gray-800);
+    --text: var(--color-white);
+    --text-bold: var(--color-gray-200);
+    --modal: var(--color-gray-800);
+    --foter: var(--color-gray-700);
+    --tag: var(--color-gray-700);
+    --tag-text: var(--color-gray-200);
+    --post-cover: var(--color-gray-900);
+    --card: var(--color-gray-800);
+    --bibtext: var(--color-neutral-500);
+    --table-header: var(--color-white);
+    --table-header-bg: var(--color-gray-700);
+    --table-text: var(--color-gray-100);
+    --table-row-hover: var(--color-gray-600);
+    --search-row-hover: var(--color-gray-700);
+    --search-bar-bg: var(--color-gray-700);
+    --time: var(--color-gray-500);
+
+    .main a {
+      @apply text-blue-400;
+    }
+
+    footer a {
+      @apply text-blue-300;
+    }
+
+    :not(pre) > code {
+      @apply text-white;
+      @apply bg-gray-600;
+    }
+  }
+}
+
+
 @theme {
   --font-sans: "Source Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-gilda: "Gilda Display";
   --font-main: var(--font-sans);
-  --color-border-main: var(--color-gray-400);
+
+  --color-border-main: var(--border-main);
   --color-primary: var(--color-blue-600);
+}
+
+@layer utilities {
+  .prose {
+    --tw-prose-body: var(--text);
+    --tw-prose-headings: var(--text);
+    --tw-prose-bold: var(--text-bold);
+    --tw-prose-quotes: var(--text);
+    --tw-prose-italics: var(--text);
+  }
 }
 
 .max-w-theme {
@@ -40,6 +207,9 @@ img:has(+ em) {
   @apply mb-0;
 }
 
+.main a {
+  @apply no-underline;
+}
 
 .manual-h1 {
   @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl;
@@ -66,10 +236,6 @@ ul.task-list li input[type="checkbox"]:checked + * {
   @apply text-green-600 font-medium;
 }
 
-.main a {
-  @apply text-primary;
-  @apply no-underline;
-}
 
 /* All tables except ones inside .highlight */
 
@@ -81,19 +247,19 @@ ul.task-list li input[type="checkbox"]:checked + * {
   }
 
   thead {
-    @apply bg-gray-100;
+    @apply bg-[var(--table-header-bg)];
   }
 
   th {
-    @apply px-4 py-2 border-b border-gray-300 font-medium text-gray-700;
+    @apply px-4 py-2 border-b border-gray-300 font-medium text-[var(--table-header)];
   }
 
   td {
-    @apply px-4 py-2 border-b border-gray-200 text-gray-600;
+    @apply px-4 py-2 border-b border-gray-200 text-[var(--table-text)];
   }
 
   tbody tr:hover {
-    @apply bg-gray-50;
+    @apply bg-[var(--table-row-hover)];
   }
 
   /* Optional: for color swatches or inner divs */
@@ -111,8 +277,6 @@ ul.task-list li input[type="checkbox"]:checked + * {
 
 /* Code Highlighting styles */
 :not(pre) > code {
-  @apply text-gray-600;
-  @apply bg-blue-50;
   @apply px-1.5;
   @apply py-0.5;
   @apply rounded;
@@ -207,4 +371,3 @@ p + .highlighter-rouge .highlight {
 .modal-animate {
   animation: modal-overshoot 150ms ease-out;
 }
-

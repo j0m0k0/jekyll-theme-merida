@@ -30,10 +30,10 @@ function renderResults(results, container) {
   results.forEach(result => {
     const el = document.createElement("a");
     el.href = result.url;
-    el.className = "block p-2 -mx-2 rounded hover:bg-gray-100 transition-colors";
+    el.className = "block p-2 border-b-1 -mx-2 rounded-t hover:bg-[var(--search-row-hover)] transition-colors";
     el.innerHTML = `
-      <h3 class="text-blue-600 font-semibold hover:underline">${result.meta.title || "Untitled"}</h3>
-      <p class="text-sm text-gray-600">${result.excerpt}</p>
+      <h3 class="font-semibold">${result.meta.title || "Untitled"}</h3>
+      <p class="text-sm text-[var(--text)]">${result.excerpt}</p>
     `;
     container.appendChild(el);
   });

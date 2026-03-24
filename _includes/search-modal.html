@@ -1,21 +1,21 @@
 <!-- Search Modal -->
 <div class="fixed inset-0 z-50 hidden bg-black/40 flex items-start justify-center pt-24" id="search-modal">
 
-  <div class="modal-animate bg-white w-full max-w-2xl mx-4 rounded-lg shadow-lg overflow-hidden">
+  <div class="modal-animate bg-[var(--modal)] w-full max-w-2xl mx-4 rounded-lg shadow-lg overflow-hidden">
 
     <!-- Search Box -->
-    <div class="border-b p-4">
+    <div class="border-b px-4 py-2 bg-[var(--search-bar-bg)]!">
       <div class="relative">
 
         <input
-          class="w-full outline-none text-lg pr-8"
+          class="w-full outline-none text-lg mr-8"
           id="search-input"
           placeholder="Type to start searching"
           type="text"
         >
 
         <button
-          class="hover:cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-gray-700 hover:text-gray-800 hidden"
+          class="hover:cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 text-[var(--text)] hover:[var(--text-bold)] hidden"
           id="search-clear"
           type="button"
         >

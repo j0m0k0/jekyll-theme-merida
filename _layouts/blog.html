@@ -28,7 +28,7 @@ layout: base
           {% if post.tags %}
           {% assign limited_tags = post.tags | slice: 0, 3 %}
           {% for tag in limited_tags %}
-          <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">
+          <span class="bg-[var(--tag)] text-[var(--tag-text)] px-2 py-1 rounded text-xs">
             {{ tag }}
           </span>
           {% endfor %}
