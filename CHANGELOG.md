@@ -1,13 +1,14 @@
 # Change Log
 
 ## v0.0.7
-- Add 'Last Updated' to the footer and it's option to the _config.yml
-- Make jekyll to rebuild the website whenever a change happens in the _config.yml
-- Make about page to look like a newspaper article
-- Decrease the max-width from 6xl to 4xl
-- Add theme switch button to navbar and minor navbar improvements
-- Define Themes into Merida
-- Show two links per row in mobile footer
+- Add 'Last Updated' to the footer and it's option to the _config.yml [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/746aec748ef26f5b2713b22a3ba9509578291cf4)
+- Make jekyll to rebuild the website whenever a change happens in the _config.yml [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/0c5cd41b6b9972ebe5ef13cf8605e9e39ba3fa0f)
+- Make about page to look like a newspaper article [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/4b81c4ce1c8263e9ebc136cc83bcc1794699870b)
+- Decrease the max-width from 6xl to 4xl [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/f6d8a5d8cd96ea2f51cabb2ff9a3ea74bf0f0029)
+- Add theme switch button to navbar and minor navbar improvements [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/85b4421d15991091fe8f1dd60b5e442236d7610b)
+- Define Themes into Merida [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/f8038ac0ca62a8184239f5112f40048803d25be7)
+- Show two links per row in mobile footer [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/63de781b9c23806b90bf3164e7b29cb5b537c022)
+- Add contribute file [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/612e038c4e61899bff7a7530dcd17fd71b23f72f)
 
 ## v0.0.5
 - Fix showing of latest news and posts and reposition profile picture [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/9137ebeab1ec72b166ffa5eb8c3ad6e40a637940)
