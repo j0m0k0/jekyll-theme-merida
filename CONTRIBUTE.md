@@ -8,6 +8,6 @@ Tentative workflow:
 4. Check _config.yaml for any necessary change
 5. Release the gem
 6. Verify the starter repo [Manually run the workflow] [maybe first on the dev branch so we don't mess with current good version]
-7. Publish the changelog
+7. Publish the changelog [TODO: Automate the generation of changelog from the commits]
 8. Publish the release note
 9. Auto-release on the starter repo
