@@ -1,5 +1,14 @@
 # Change Log
 
+## v0.0.7
+- Add 'Last Updated' to the footer and it's option to the _config.yml
+- Make jekyll to rebuild the website whenever a change happens in the _config.yml
+- Make about page to look like a newspaper article
+- Decrease the max-width from 6xl to 4xl
+- Add theme switch button to navbar and minor navbar improvements
+- Define Themes into Merida
+- Show two links per row in mobile footer
+
 ## v0.0.5
 - Fix showing of latest news and posts and reposition profile picture [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/9137ebeab1ec72b166ffa5eb8c3ad6e40a637940)
 - Change profile photo and align it better [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/c75be7b7168f5d756e62bff5c6220ecb740edf7e)
