@@ -14,11 +14,12 @@
 
 :root {
   --border-main: var(--color-gray-400);
-  --navbar-bg: var(--color-gray-800);
+  --navbar-bg: var(--color-gray-50);
+  --navbar-active-item: var(--color-blue-200);
   --text: var(--color-black);
   --text-bold: var(--color-gray-900);
   --modal: var(--color-white);
-  --foter: var(--color-gray-200);
+  --foter: var(--color-gray-50);
   --tag: var(--color-gray-200);
   --tag-text: var(--color-gray-700);
   --post-cover: var(--color-gray-100);
@@ -35,11 +36,12 @@
 
 html[data-theme="light"] {
   --border-main: var(--color-gray-400);
-  --navbar-bg: var(--color-gray-800);
+  --navbar-bg: var(--color-gray-50);
+  --navbar-active-item: var(--color-blue-200);
   --text: var(--color-black);
   --text-bold: var(--color-gray-900);
   --modal: var(--color-white);
-  --foter: var(--color-gray-200);
+  --foter: var(--color-gray-50);
   --tag: var(--color-gray-200);
   --tag-text: var(--color-gray-700);
   --post-cover: var(--color-gray-100);
@@ -68,6 +70,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --border-main: var(--color-gray-600);
   --navbar-bg: var(--color-gray-800);
+  --navbar-active-item: var(--color-blue-500);
   --text: var(--color-white);
   --text-bold: var(--color-gray-200);
   --modal: var(--color-gray-800);
@@ -102,11 +105,12 @@ html[data-theme="dark"] {
 @media (prefers-color-scheme: light) {
   html[data-theme="system"] {
     --border-main: var(--color-gray-400);
-    --navbar-bg: var(--color-gray-800);
+    --navbar-bg: var(--color-gray-50);
+    --navbar-active-item: var(--color-blue-200);
     --text: var(--color-black);
     --text-bold: var(--color-gray-900);
     --modal: var(--color-white);
-    --foter: var(--color-gray-200);
+    --foter: var(--color-gray-50);
     --tag: var(--color-gray-200);
     --tag-text: var(--color-gray-700);
     --post-cover: var(--color-gray-100);
@@ -136,6 +140,7 @@ html[data-theme="dark"] {
   html[data-theme="system"] {
     --border-main: var(--color-gray-600);
     --navbar-bg: var(--color-gray-800);
+    --navbar-active-item: var(--color-blue-500);
     --text: var(--color-white);
     --text-bold: var(--color-gray-200);
     --modal: var(--color-gray-800);
