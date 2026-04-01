@@ -13,6 +13,7 @@
 @plugin "@tailwindcss/typography";
 
 :root {
+  --bg-main: var(--color-white);
   --border-main: var(--color-gray-400);
   --navbar-bg: var(--color-gray-50);
   --navbar-active-item: var(--color-blue-200);
@@ -35,6 +36,7 @@
 }
 
 html[data-theme="light"] {
+  --bg-main: var(--color-white);
   --border-main: var(--color-gray-400);
   --navbar-bg: var(--color-gray-50);
   --navbar-active-item: var(--color-blue-200);
@@ -68,16 +70,17 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
+  --bg-main: rgb(27 27 30);
   --border-main: var(--color-gray-600);
   --navbar-bg: var(--color-gray-800);
-  --navbar-active-item: var(--color-blue-500);
-  --text: var(--color-white);
+  --navbar-active-item: var(--color-gray-900);
+  --text: rgb(175 176 177);
   --text-bold: var(--color-gray-200);
   --modal: var(--color-gray-800);
   --foter: var(--color-gray-700);
   --tag: var(--color-gray-700);
   --tag-text: var(--color-gray-200);
-  --post-cover: var(--color-gray-900);
+  --post-cover: var(--color-gray-800);
   --card: var(--color-gray-800);
   --bibtext: var(--color-neutral-500);
   --table-header: var(--color-white);
@@ -104,6 +107,7 @@ html[data-theme="dark"] {
 
 @media (prefers-color-scheme: light) {
   html[data-theme="system"] {
+    --bg-main: var(--color-white);
     --border-main: var(--color-gray-400);
     --navbar-bg: var(--color-gray-50);
     --navbar-active-item: var(--color-blue-200);
@@ -138,16 +142,17 @@ html[data-theme="dark"] {
 
 @media (prefers-color-scheme: dark) {
   html[data-theme="system"] {
+    --bg-main: rgb(27 27 30);
     --border-main: var(--color-gray-600);
     --navbar-bg: var(--color-gray-800);
-    --navbar-active-item: var(--color-blue-500);
-    --text: var(--color-white);
+    --navbar-active-item: var(--color-gray-900);
+    --text: rgb(175 176 177);
     --text-bold: var(--color-gray-200);
     --modal: var(--color-gray-800);
     --foter: var(--color-gray-700);
     --tag: var(--color-gray-700);
     --tag-text: var(--color-gray-200);
-    --post-cover: var(--color-gray-900);
+    --post-cover: var(--color-gray-800);
     --card: var(--color-gray-800);
     --bibtext: var(--color-neutral-500);
     --table-header: var(--color-white);
