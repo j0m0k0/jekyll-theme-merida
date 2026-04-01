@@ -69,14 +69,20 @@ jobs:
 
           mv starter/Gemfile.new starter/Gemfile
 
+      - name: Read theme version
+        id: theme_version
+        run: echo "version=$(node -p "require('./theme/package.json').version")" >> "$GITHUB_OUTPUT"
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.MERIDA_STARTER_SYNC_TOKEN }}
           path: starter
           branch: sync-from-theme
-          commit-message: Sync merida-starter files from jekyll-theme-merida
-          title: Sync merida-starter files from jekyll-theme-merida
+          commit-message: Sync merida-starter files from jekyll-theme-merida v${{ steps.theme_version.outputs.version }}
+          title: Sync merida-starter files from jekyll-theme-merida v${{ steps.theme_version.outputs.version }}
           body: |
-            This PR syncs starter files from the jekyll-theme-merida repository.
+            This PR syncs starter files from the `jekyll-theme-merida` repository.
+
+            Synced theme version: `v${{ steps.theme_version.outputs.version }}`
           base: main
