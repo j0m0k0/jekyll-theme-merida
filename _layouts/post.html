@@ -15,7 +15,7 @@ layout: base
 <article class="mx-auto w-full px-0 py-8 flex flex-col space-y-4">
 
   <!-- Post meta container -->
-  <div class="relative overflow-hidden py-3 px-2 md:px-3 rounded-tl-lg rounded-tr-lg mb-0 border border-gray-200">
+  <div class="relative overflow-hidden py-3 px-2 md:px-3 rounded-tl-lg rounded-tr-lg mb-0">
 
     {% if page.background.file %}
     <div
@@ -56,7 +56,7 @@ layout: base
       <!-- Tags -->
       <div class="flex flex-wrap gap-1 sm:gap-2 text-sm md:text-base justify-center md:justify-start">
         {% for tag in page.tags %}
-        <span class="bg-gray-700 text-white px-2 py-1 rounded">
+        <span class="bg-gray-700 text-white px-2 py-0.5 rounded">
         {{ tag }}
       </span>
         {% endfor %}
@@ -66,7 +66,7 @@ layout: base
   </div>
 
   <!-- Post content -->
-  <div class="px-1 md:px-4 pt-6! max-w-full border-x border-b rounded-b-lg border-b-gray-200 border-x-gray-200">
+  <div class="px-1 md:px-4 pt-6! max-w-full">
     {{ content }}
   </div>
 
