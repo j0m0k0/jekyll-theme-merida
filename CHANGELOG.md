@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.0.8
+- Improve various details about the theme
+- Add basic SEO support
+- Update Merida default favicons
+- Improve mobile experience for the whole website and specifically for blog posts
+
 ## v0.0.7
 - Add 'Last Updated' to the footer and it's option to the _config.yml [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/746aec748ef26f5b2713b22a3ba9509578291cf4)
 - Make jekyll to rebuild the website whenever a change happens in the _config.yml [Link](https://github.com/j0m0k0/jekyll-theme-merida/commit/0c5cd41b6b9972ebe5ef13cf8605e9e39ba3fa0f)
