@@ -81,10 +81,15 @@ function applyTheme(theme) {
   return normalizedTheme;
 }
 
+const root = document.documentElement;
+const initialTheme = normalizeTheme(getStoredTheme() || root.dataset.theme);
+
+applyTheme(initialTheme);
+
 function initThemeSwitch() {
-  const root = document.documentElement;
-  const initialTheme = normalizeTheme(getStoredTheme() || root.dataset.theme);
-  let currentTheme = applyTheme(initialTheme);
+  let currentTheme = normalizeTheme(root.dataset.theme);
+
+  applyTheme(currentTheme);
 
   document.querySelectorAll(".theme-toggle").forEach((button) => {
     button.addEventListener("click", () => {
