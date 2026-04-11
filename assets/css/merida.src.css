@@ -32,7 +32,7 @@
   --table-row-hover: var(--color-gray-50);
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
-  --time: var(--color-gray-100);
+  --time: var(--color-gray-200);
 }
 
 html[data-theme="light"] {
@@ -55,7 +55,7 @@ html[data-theme="light"] {
   --table-row-hover: var(--color-gray-50);
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
-  --time: var(--color-gray-100);
+  --time: var(--color-gray-200);
 
   .main a {
     @apply text-primary;
@@ -89,7 +89,7 @@ html[data-theme="dark"] {
   --table-row-hover: var(--color-gray-600);
   --search-row-hover: var(--color-gray-700);
   --search-bar-bg: var(--color-gray-700);
-  --time: var(--color-gray-500);
+  --time: var(--color-gray-600);
 
   .main a {
     @apply text-blue-400;
@@ -126,7 +126,7 @@ html[data-theme="dark"] {
     --table-row-hover: var(--color-gray-50);
     --search-row-hover: var(--color-gray-100);
     --search-bar-bg: var(--color-gray-200);
-    --time: var(--color-gray-100);
+    --time: var(--color-gray-200);
 
     .main a {
       @apply text-primary;
@@ -161,7 +161,7 @@ html[data-theme="dark"] {
     --table-row-hover: var(--color-gray-600);
     --search-row-hover: var(--color-gray-700);
     --search-bar-bg: var(--color-gray-700);
-    --time: var(--color-gray-500);
+    --time: var(--color-gray-600);
 
     .main a {
       @apply text-blue-400;

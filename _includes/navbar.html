@@ -13,11 +13,11 @@
         </button>
 
         <div class="flex items-center gap-1 md:hidden">
-          <button aria-label="Toggle theme" class="theme-toggle flex items-center justify-center p-2 rounded text-[var(--text)] hover:text-blue-300 hover:cursor-pointer">
+          <button aria-label="Toggle theme" class="theme-toggle flex items-center justify-center p-2 rounded text-[var(--text)] hover:text-blue-400 hover:cursor-pointer">
             <span aria-hidden="true" class="theme-toggle-icon size-5"></span>
           </button>
 
-          <button aria-label="Search" class="search-open flex items-center justify-center p-2 rounded text-[var(--text)] hover:text-blue-300 hover:cursor-pointer">
+          <button aria-label="Search" class="search-open flex items-center justify-center p-2 rounded text-[var(--text)] hover:text-blue-400 hover:cursor-pointer">
             <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -31,7 +31,7 @@
           {% if site.data.menu %}
             {% for item in site.data.menu.items %}
             <li>
-              <a class="p-2 rounded text-[var(--text)] hover:text-blue-300 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]!  {% endif %}"
+              <a class="p-2 rounded text-[var(--text)] hover:text-blue-400 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]! {% endif %}"
                  href="{{ item.url }}">
                 {{ item.title }}
               </a>
@@ -43,14 +43,14 @@
         <ul class="flex items-center space-x-2">
           <!-- Theme Toggle -->
           <li>
-            <button aria-label="Toggle theme" class="theme-toggle flex items-center gap-2 p-2 rounded text-[var(--text)] hover:text-blue-300 hover:cursor-pointer">
+            <button aria-label="Toggle theme" class="theme-toggle flex items-center gap-2 p-2 rounded text-[var(--text)] hover:text-blue-400 hover:cursor-pointer">
               <span aria-hidden="true" class="theme-toggle-icon size-5"></span>
             </button>
           </li>
 
           <!-- Search Icon -->
           <li>
-            <button class="search-open flex items-center gap-2 p-2 rounded text-[var(--text)] hover:text-blue-300 hover:cursor-pointer">
+            <button class="search-open flex items-center gap-2 p-2 rounded text-[var(--text)] hover:text-blue-400 hover:cursor-pointer">
               <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -68,7 +68,7 @@
       {% if site.data.menu %}
         {% for item in site.data.menu.items %}
         <li>
-          <a class="block p-2 rounded text-[var(--text)] hover:text-blue-300 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]!  {% endif %}"
+          <a class="block p-2 rounded text-[var(--text)] hover:text-blue-400 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]!  {% endif %}"
              href="{{ item.url }}">
             {{ item.title }}
           </a>
