@@ -3,7 +3,7 @@ layout: about
 title: "About Me"
 permalink: /
 profile:
-  image: profile_photo.jpg
+  image: /assets/img/profile_photo.jpg
   alt: Photo by Vicky Hladynets, Unsplash
   caption: Photo by <a href="https://unsplash.com/@vhladynets" target="_blank">Vicky Hladynets</a>, <a href="https://unsplash.com/" target="_blank">Unsplash</a>
 latest_posts:
