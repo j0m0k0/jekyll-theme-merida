@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.files = files
     .select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
-    .reject { |f| f == source_css }
+    .reject { |f| f == source_css || f.start_with?("assets/img/") }
   spec.files << compiled_css if File.exist?(compiled_css)
   spec.files.uniq!
 
