@@ -35,6 +35,7 @@ jobs:
             starter/_pages \
             starter/_plugins \
             starter/_posts \
+            starter/assets/img \
             starter/downloads
 
           mkdir -p \
@@ -44,6 +45,7 @@ jobs:
             starter/_pages \
             starter/_plugins \
             starter/_posts \
+            starter/assets/img \
             starter/downloads
 
           cp -R theme/_bibliography/. starter/_bibliography
@@ -52,6 +54,7 @@ jobs:
           cp -R theme/_pages/. starter/_pages
           cp -R theme/_plugins/. starter/_plugins
           cp -R theme/_posts/. starter/_posts
+          cp -R theme/assets/img/. starter/assets/img
           cp -R theme/downloads/. starter/downloads
           {
             printf '%s\n' 'theme: jekyll-theme-merida'
