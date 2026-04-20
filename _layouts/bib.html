@@ -22,19 +22,19 @@
     {% else %}
     {{ entry.title }}
     {% endif %}
-
-    <span class="text-neutral-500 truncate font-light! text-base italic">
-      {% if cleaned_booktitle != "" %}
-      <span>{{ cleaned_booktitle }},</span>
-      {% endif %}
-      {% if entry.journal %}
-      <span>{{ entry.journal }},</span>
-      {% endif %}
-      {% if entry.year %}
-      <span>{{ entry.year }}</span>
-      {% endif %}
-    </span>
   </h2>
+
+  <p class="text-neutral-500 font-light! text-base italic">
+    {% if cleaned_booktitle != "" %}
+    <span>{{ cleaned_booktitle }},</span>
+    {% endif %}
+    {% if entry.journal %}
+    <span>{{ entry.journal }},</span>
+    {% endif %}
+    {% if entry.year %}
+    <span>{{ entry.year }}</span>
+    {% endif %}
+  </p>
 
 
 
