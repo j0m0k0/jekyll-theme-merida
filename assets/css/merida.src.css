@@ -33,6 +33,7 @@
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
   --time: var(--color-gray-200);
+  --research-box-bg: var(--color-gray-100);
 }
 
 html[data-theme="light"] {
@@ -56,9 +57,11 @@ html[data-theme="light"] {
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
   --time: var(--color-gray-200);
+  --research-box-bg: var(--color-gray-100);
+
 
   .main a {
-    @apply text-primary;
+    @apply text-blue-700;
   }
 
   :not(pre) > code {
@@ -82,7 +85,7 @@ html[data-theme="dark"] {
   --tag-text: var(--color-gray-200);
   --post-cover: var(--color-gray-800);
   --card: var(--color-gray-800);
-  --bibtext: var(--color-neutral-500);
+  --bibtext: var(--color-neutral-700);
   --table-header: var(--color-white);
   --table-header-bg: var(--color-gray-700);
   --table-text: var(--color-gray-100);
@@ -90,6 +93,7 @@ html[data-theme="dark"] {
   --search-row-hover: var(--color-gray-700);
   --search-bar-bg: var(--color-gray-700);
   --time: var(--color-gray-600);
+  --research-box-bg: none;
 
   .main a {
     @apply text-blue-400;
@@ -127,9 +131,10 @@ html[data-theme="dark"] {
     --search-row-hover: var(--color-gray-100);
     --search-bar-bg: var(--color-gray-200);
     --time: var(--color-gray-200);
+    --research-box-bg: var(--color-gray-100);
 
     .main a {
-      @apply text-primary;
+      @apply text-blue-700;
     }
 
 
@@ -154,7 +159,7 @@ html[data-theme="dark"] {
     --tag-text: var(--color-gray-200);
     --post-cover: var(--color-gray-800);
     --card: var(--color-gray-800);
-    --bibtext: var(--color-neutral-500);
+    --bibtext: var(--color-neutral-700);
     --table-header: var(--color-white);
     --table-header-bg: var(--color-gray-700);
     --table-text: var(--color-gray-100);
@@ -162,6 +167,7 @@ html[data-theme="dark"] {
     --search-row-hover: var(--color-gray-700);
     --search-bar-bg: var(--color-gray-700);
     --time: var(--color-gray-600);
+    --research-box-bg: none;
 
     .main a {
       @apply text-blue-400;

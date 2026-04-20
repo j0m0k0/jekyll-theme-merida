@@ -1,16 +1,7 @@
 ---
 ---
 <div
-  class="bib-entry border-1 border-border-main break-words px-2 pb-2 mb-8! last:mb-0 text-center">
-
-  <!-- Title -->
-  <h2 class="mt-2! mb-0! text-center!">
-    {% if entry.url %}
-    <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
-    {% else %}
-    {{ entry.title }}
-    {% endif %}
-  </h2>
+  class="bib-entry border rounded-md border-border-main bg-[var(--research-box-bg)] break-words px-4 py-2 mb-6! last:mb-0">
 
   <!-- Venue / Conference / Journal -->
   {% assign year_str = entry.year | append: "" %}
@@ -22,17 +13,30 @@
   {% assign cleaned_booktitle = clean_booktitle %}
   {% endif %}
 
-  <p class="text-neutral-500 truncate">
-    {% if cleaned_booktitle != "" %}
-    <span>{{ cleaned_booktitle }},</span>
+
+
+  <!-- Title -->
+  <h2 class="mt-0 mb-2 ">
+    {% if entry.url %}
+    <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+    {% else %}
+    {{ entry.title }}
     {% endif %}
-    {% if entry.journal %}
-    <span>{{ entry.journal }},</span>
-    {% endif %}
-    {% if entry.year %}
-    <span>{{ entry.year }}</span>
-    {% endif %}
-  </p>
+
+    <span class="text-neutral-500 truncate font-light! text-base italic">
+      {% if cleaned_booktitle != "" %}
+      <span>{{ cleaned_booktitle }},</span>
+      {% endif %}
+      {% if entry.journal %}
+      <span>{{ entry.journal }},</span>
+      {% endif %}
+      {% if entry.year %}
+      <span>{{ entry.year }}</span>
+      {% endif %}
+    </span>
+  </h2>
+
+
 
   <!-- Authors -->
   <p>{{ entry.author }}</p>
@@ -43,24 +47,24 @@
   {% endif %}
 
   <!-- Links -->
-  <div class="flex flex-wrap gap-3 text-sm justify-center">
+  <div class="flex flex-wrap gap-3 text-sm mb-1">
     {% if entry.url %}
-    <a class="prose px-2 text-[#55A194]! bg-[#EEF5F4] hover:bg-[#DDECE9]" href="{{ entry.url }}">Paper</a>
+    <a class="prose px-2 border rounded-md text-[#55A194]! hover:bg-[#DDECE9]" href="{{ entry.url }}">Paper</a>
     {% endif %}
     {% if entry.code %}
-    <a class=" prose text-[#F16A6F]! px-2 bg-[#FDF0F0] hover:bg-[#FCE1E2]" href="{{ entry.code }}">Code</a>
+    <a class=" prose text-[#F16A6F]! px-2 border rounded-md  hover:bg-[#FCE1E2]" href="{{ entry.code }}">Code</a>
     {% endif %}
     {% if entry.slides %}
-    <a class=" prose text-violet-500! px-2 bg-violet-100 hover:bg-violet-200" href="{{ entry.slides }}">Slides</a>
+    <a class=" prose text-violet-500! px-2 border rounded-md  hover:bg-violet-200" href="{{ entry.slides }}">Slides</a>
     {% endif %}
     {% if entry.bibtex %}
-    <button class="prose hover:cursor-pointer px-2 text-orange-500! bg-orange-200 hover:bg-orange-300 bibtex-toggle" type="button">BibTeX</button>
+    <button class="prose hover:cursor-pointer px-2 border rounded-md text-blue-500!  hover:bg-blue-100 bibtex-toggle" type="button">BibTeX</button>
     {% endif %}
   </div>
 
   <!-- Hidden details -->
   {% if entry.bibtex %}
-  <details class="bibtex-details mt-4">
+  <details class="bibtex-details">
     <summary class="sr-only">BibTeX</summary>
     <pre class="text-left mt-2 bg-[var(--bibtext)] rounded-lg p-4 text-xs font-mono whitespace-pre-wrap break-words">{{ entry.bibtex }}</pre>
   </details>
