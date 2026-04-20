@@ -1,5 +1,10 @@
 # Change Log
 
+## v0.0.9
+- Fix them flicker bug
+- Separate starter assets from the gem bundle
+- Improve publications page style
+
 ## v0.0.8
 - Improve various details about the theme
 - Add basic SEO support
