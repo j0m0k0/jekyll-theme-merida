@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.0.11
+- Reduce project star badge width
+
+## v0.0.10
+- Fix overflow problem in publications subtitle
+
 ## v0.0.9
 - Fix them flicker bug
 - Separate starter assets from the gem bundle
