@@ -153,13 +153,3 @@ $$
 display
 $$
 ```
-
-## `npm run release:gem` Says The Version Is Already Published
-
-Bump `package.json`, update `CHANGELOG.md`, run:
-
-```sh
-npm install --package-lock-only
-```
-
-Then release again.
