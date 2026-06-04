@@ -12,12 +12,12 @@ latest_news:
   enabled: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You
-can put a picture in, too. The code is already in, just name your picture `prof_pic.png` (or change it through `_config.yaml` to whatever you want) and put it in the `/assets/img/`
-folder.
+Write your biography here. Tell the world about yourself. Link to your favorite site or profile. You
+can put a picture in, too. The code is already in; update the `profile.image` value in this page's front matter and put the image in the `/assets/img/`
+folder, or use an external image URL.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing
-`profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/references.bib` and Jekyll will render
+the `profile` property in the front matter of `_pages/about.md`. Edit `_bibliography/references.bib` and Jekyll will render
 your [publications page](/publications/) automatically.
 
 Link to your social media connections, too. Add your Facebook, Twitter, LinkedIn,

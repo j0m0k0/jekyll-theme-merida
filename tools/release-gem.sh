@@ -6,7 +6,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PACKAGE_JSON="$ROOT_DIR/package.json"
 CONFIG_YML="$ROOT_DIR/_config.yml"
 GEM_NAME="jekyll-theme-merida"
-RELEASE_THEME_LINE="theme: jekyll-theme-chirpy"
+RELEASE_THEME_LINE="theme: jekyll-theme-merida"
 
 cd "$ROOT_DIR"
 

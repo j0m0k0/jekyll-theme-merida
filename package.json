@@ -1,8 +1,7 @@
 {
-  "name": "merida",
+  "name": "jekyll-theme-merida",
   "version": "0.0.11",
-  "description": "",
-  "main": "postcss.config.js",
+  "description": "A minimal, responsive Jekyll theme for personal, academic, and technical writing websites.",
   "scripts": {
     "css:build": "npx @tailwindcss/cli -i assets/css/merida.src.css -o assets/css/merida.css --minify",
     "css:watch": "npx @tailwindcss/cli -i assets/css/merida.src.css -o assets/css/merida.css --minify --watch",
@@ -10,13 +9,28 @@
     "dev": "concurrently \"npm:css:watch\" \"npm:jekyll:serve\"",
     "release:gem": "bash ./tools/release-gem.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "jekyll",
+    "jekyll-theme",
+    "static-site",
+    "blog",
+    "academic"
+  ],
+  "author": "Javad Mokhtari Koushyar",
+  "license": "MIT",
+  "homepage": "https://github.com/j0m0k0/jekyll-theme-merida",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j0m0k0/jekyll-theme-merida.git"
+  },
+  "bugs": {
+    "url": "https://github.com/j0m0k0/jekyll-theme-merida/issues"
+  },
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "concurrently": "^9.2.1",
+    "pagefind": "^1.5.2",
     "tailwindcss": "^4.2.1"
   }
 }

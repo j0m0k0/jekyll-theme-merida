@@ -65,7 +65,11 @@ scholar:
 
 exclude:
   - README.md
+  - CONTRIBUTING.md
+  - CONTRIBUTE.md
   - DESIGN.md
+  - SUPPORT.md
+  - SECURITY.md
   - tailwind_enabler.css
   - CHANGELOG.md
   - "*.gem"

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">Merida logo</title>
+  <desc id="desc">A stylized Merida wordmark with a layered document mark.</desc>
+  <defs>
+    <linearGradient id="markGradient" x1="100" y1="24" x2="268" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55A194"/>
+      <stop offset="0.52" stop-color="#2D6CDF"/>
+      <stop offset="1" stop-color="#F16A6F"/>
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="340" y1="192" x2="800" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55A194"/>
+      <stop offset="0.5" stop-color="#2D6CDF"/>
+      <stop offset="1" stop-color="#F16A6F"/>
+    </linearGradient>
+    <filter id="softShadow" x="48" y="8" width="276" height="244" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1B1B1E" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect x="34" y="18" width="892" height="244" rx="44" fill="#FBFCFE"/>
+  <path d="M78 230C154 254 252 254 370 230C487.333 206 593.667 206 689 230C752.333 245.938 812.667 247.604 870 235" fill="none" stroke="#EEF2F7" stroke-width="18" stroke-linecap="round"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M96 58C96 40.327 110.327 26 128 26H242C259.673 26 274 40.327 274 58V194C274 211.673 259.673 226 242 226H128C110.327 226 96 211.673 96 194V58Z" fill="url(#markGradient)"/>
+    <path d="M122 68C122 61.373 127.373 56 134 56H230C236.627 56 242 61.373 242 68V172C242 178.627 236.627 184 230 184H134C127.373 184 122 178.627 122 172V68Z" fill="#FFFFFF" fill-opacity="0.94"/>
+    <path d="M144 86L182 132L220 86V162H198V127L182 148L166 127V162H144V86Z" fill="#1B1B1E"/>
+    <path d="M122 198H242" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+    <path d="M142 212H222" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.56"/>
+  </g>
+
+  <g>
+    <text x="336" y="122" fill="#1B1B1E" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" letter-spacing="0">Merida</text>
+    <text x="342" y="166" fill="#5B6472" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="500" letter-spacing="0">a text-focused Jekyll theme</text>
+    <path d="M342 198H790" stroke="url(#lineGradient)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

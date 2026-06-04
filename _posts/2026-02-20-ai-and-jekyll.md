@@ -3,7 +3,12 @@ layout: post
 title: "Will AI be friend with Jekyll?"
 date: 2026-03-03 21:27:00 -0600
 tags: [AI, Jekyll, Web Development, Automation]
-background: bg-1.jpg
+background:
+  file: /assets/img/backgrounds/bg-1.jpg
+  opacity: 0.8
+  size: cover
+  x: 50%
+  y: 50%
 ---
 
 # The Static Evolution: Will AI be friend with Jekyll?
