@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://rubygems.org/gems/jekyll-theme-merida"><img alt="RubyGems" src="https://img.shields.io/gem/v/jekyll-theme-merida?style=for-the-badge&label=RubyGems&color=55A194"></a>
   <a href="https://rubygems.org/gems/jekyll-theme-merida"><img alt="Gem downloads" src="https://img.shields.io/gem/dt/jekyll-theme-merida?style=for-the-badge&color=F16A6F"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/j0m0k0/jekyll-theme-merida?style=for-the-badge&color=2D6CDF"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/j0m0k0/jekyll-theme-merida?style=for-the-badge&color=2D6CDF&cacheSeconds=300"></a>
   <img alt="Jekyll" src="https://img.shields.io/badge/Jekyll-4.4-CC0000?style=for-the-badge&logo=jekyll&logoColor=white">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4.x-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white">
 </p>
