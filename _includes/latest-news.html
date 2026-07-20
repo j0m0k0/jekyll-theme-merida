@@ -10,7 +10,7 @@
 
       <!-- Only add [more] if news has content -->
       {% if news.content and news.content != "" %}
-      <a class="ml-2 text-sm hover:underline bg-[var(--card)] px-2 py-1 rounded-md whitespace-nowrap" href="{{ news.url }}">
+      <a class="ml-2 text-sm hover:underline bg-[var(--card)] px-2 py-1 rounded-md whitespace-nowrap" href="{{ news.url | relative_url }}">
         Read more →
       </a>
       {% endif %}

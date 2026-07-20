@@ -12,7 +12,7 @@ layout: base
 
         <!-- Main content (title + date) -->
         <div class="flex flex-col flex-1">
-          <a class="mb-2" href="{{ post.url }}">
+          <a class="mb-2" href="{{ post.url | relative_url }}">
             {{ post.title }}
           </a>
 

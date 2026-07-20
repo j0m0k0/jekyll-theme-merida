@@ -1,8 +1,9 @@
 let pagefind;
+const pagefindUrl = new URL("../../pagefind/pagefind.js", document.currentScript.src);
 
 // Helper: Load Pagefind
 async function initPagefind() {
-  const mod = await import("/pagefind/pagefind.js");
+  const mod = await import(pagefindUrl.href);
   await mod.init();
   return mod;
 }

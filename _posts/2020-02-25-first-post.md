@@ -1,34 +1,24 @@
 ---
 layout: post
-title: First post!
+title: "Writing Technical Notes With Merida"
+date: 2024-02-25 09:00:00 -0600
+tags: [Writing, Jekyll, Code]
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You
-can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web
-server and auto-regenerates your site when a file is updated.
+Merida is built for notes that mix prose, equations, and code. This short post demonstrates the default post layout and a few common Markdown patterns.
 
 $$X = Y + 3$$
 
-To add new posts, simply add a $ E=MC^2 $ file in the `_posts` directory that follows the convention
-`YYYY-MM-DD-name-of-post.ext`
-and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+To add new posts, create a Markdown file in `_posts` that follows the `YYYY-MM-DD-name.ext` convention and includes front matter. Inline math like $E=mc^2$ is handled by MathJax.
 
-Jekyll also offers powerful support for code snippets:
+Jekyll also offers strong support for code snippets:
 
 ```ruby
 def print_hi(name)
-puts "Hi, #{name}"
+  puts "Hi, #{name}"
 end
+
 print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
 ```
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature
-requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-
-[jekyll-talk]: https://talk.jekyllrb.com/
+Longer examples can include lists, quotes, tables, images, and footnotes while keeping the generated page static and fast.

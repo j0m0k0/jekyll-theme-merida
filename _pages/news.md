@@ -5,4 +5,4 @@ permalink: /news
 excerpt: "Latest news and updates."
 ---
 # News
-Latest news about me, my projects and research.
+Short updates for releases, talks, milestones, and project notes. Items with a body render a detail page; items without one stay as compact timeline entries.

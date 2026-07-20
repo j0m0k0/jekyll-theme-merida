@@ -14,6 +14,10 @@
   A minimal, responsive Jekyll theme for personal, academic, and technical writing websites.
 </p>
 
+<p align="center">
+  <a href="https://j0m0k0.github.io/jekyll-theme-merida/">Live showcase</a>
+</p>
+
 Merida ships with layouts for an about page, blog, news, projects, and publications, plus dark mode, MathJax, Rouge syntax highlighting, copy buttons for code blocks, Pagefind search, SEO metadata, RSS feeds, and sitemap generation.
 
 <p align="center">

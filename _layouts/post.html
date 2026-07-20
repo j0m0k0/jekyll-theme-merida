@@ -4,9 +4,9 @@ layout: base
 <div class="prose prose-sm sm:prose-sm md:prose-lg min-w-full">
 <nav class="flex items-center gap-2">
   {% if page.collection == "news" %}
-  <a class="text-blue-600 hover:underline" href="/news/">News</a>
+  <a class="text-blue-600 hover:underline" href="{{ '/news/' | relative_url }}">News</a>
   {% else %}
-  <a class="text-blue-600 hover:underline" href="/blog/">Blog</a>
+  <a class="text-blue-600 hover:underline" href="{{ '/blog/' | relative_url }}">Blog</a>
   {% endif %}
   <span class="text-gray-400">/</span>
   <span class="font-semibold">{{ page.title }}</span>
@@ -21,7 +21,7 @@ layout: base
     <div
       class="absolute inset-0 -z-10 rounded-tl-lg rounded-tr-lg"
       style="
-      background-image: url('{{ page.background.file }}');
+      background-image: url('{{ page.background.file | relative_url }}');
       background-size: {{ page.background.size | default: 'cover' }};
       background-repeat: no-repeat;
       background-position: {{ page.background.x | default: '50%' }} {{ page.background.y | default: '50%' }};

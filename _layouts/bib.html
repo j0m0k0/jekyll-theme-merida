@@ -55,7 +55,7 @@
     <a class=" prose text-[#F16A6F]! px-2 border rounded-md  hover:bg-[#FCE1E2]" href="{{ entry.code }}">Code</a>
     {% endif %}
     {% if entry.slides %}
-    <a class=" prose text-violet-500! px-2 border rounded-md  hover:bg-violet-200" href="{{ entry.slides }}">Slides</a>
+    <a class=" prose text-violet-500! px-2 border rounded-md  hover:bg-violet-200" href="{{ entry.slides | relative_url }}">Slides</a>
     {% endif %}
     {% if entry.bibtex %}
     <button class="prose hover:cursor-pointer px-2 border rounded-md text-blue-500!  hover:bg-blue-100 bibtex-toggle" type="button">BibTeX</button>

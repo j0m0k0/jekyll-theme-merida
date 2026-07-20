@@ -5,4 +5,4 @@ permalink: /blog
 excerpt: "My blog"
 ---
 # Blog
-My latest writings, usually about algorithm, data structures, and reinforcement learning.
+Sample long-form writing that demonstrates post cards, tags, syntax highlighting, responsive tables, images, and MathJax.

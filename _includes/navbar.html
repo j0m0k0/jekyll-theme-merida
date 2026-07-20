@@ -32,7 +32,7 @@
             {% for item in site.data.menu.items %}
             <li>
               <a class="p-2 rounded text-[var(--text)] hover:text-blue-400 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]! {% endif %}"
-                 href="{{ item.url }}">
+                 href="{{ item.url | relative_url }}">
                 {{ item.title }}
               </a>
             </li>
@@ -69,7 +69,7 @@
         {% for item in site.data.menu.items %}
         <li>
           <a class="block p-2 rounded text-[var(--text)] hover:text-blue-400 {% if item.url == page.url %}bg-[var(--navbar-active-item)] hover:text-[var(--text)]!  {% endif %}"
-             href="{{ item.url }}">
+             href="{{ item.url | relative_url }}">
             {{ item.title }}
           </a>
         </li>

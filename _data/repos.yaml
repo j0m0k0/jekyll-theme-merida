@@ -1,6 +1,6 @@
 items:
   - name: Linux
-    description: Linux Kernel by Legendary Linus Torvalds
+    description: Example of a large open source repository listing.
     date: 2020-05-19
     user_name: torvalds
     repo_name: linux
@@ -8,7 +8,7 @@ items:
     category: "Open Source Projects"
 
   - name: Python Black
-    description: Python black formatter
+    description: Example formatter project with a GitHub star badge.
     date: 2023-05-07
     user_name: python
     repo_name: black
@@ -16,7 +16,7 @@ items:
     category: "Open Source Projects"
 
   - name: Numpy
-    description: Added the matrix multiplication algorithm
+    description: Contribution example that links to closed PRs by author.
     date: 2024-05-13
     user_name: numpy
     repo_name: numpy
@@ -25,7 +25,7 @@ items:
     category: "Open Source Contributions"
 
   - name: Project Beta
-    description: Python black formatter
+    description: Demo coursework project with repository metadata.
     date: 2023-05-07
     user_name: python
     repo_name: black
@@ -33,7 +33,7 @@ items:
     category: "Course Projects"
 
   - name: Project Gamma
-    description: Added the matrix multiplication algorithm
+    description: Demo research prototype with repository metadata.
     date: 2024-05-13
     user_name: numpy
     repo_name: numpy

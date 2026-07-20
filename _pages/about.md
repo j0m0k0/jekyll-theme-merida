@@ -1,6 +1,6 @@
 ---
 layout: about
-title: "About Me"
+title: "About Merida"
 permalink: /
 profile:
   image: /assets/img/profile_photo.jpg
@@ -12,18 +12,15 @@ latest_news:
   enabled: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite site or profile. You
-can put a picture in, too. The code is already in; update the `profile.image` value in this page's front matter and put the image in the `/assets/img/`
-folder, or use an external image URL.
+Merida is a compact Jekyll theme for people who want a fast personal site without giving up the details that make long-form technical content pleasant to read. This showcase uses generic content so you can see how the theme handles an about page, posts, news, project lists, publications, MathJax, syntax highlighting, search, and dark mode.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing
-the `profile` property in the front matter of `_pages/about.md`. Edit `_bibliography/references.bib` and Jekyll will render
-your [publications page](/publications/) automatically.
+The layout is designed for a researcher, engineer, writer, or small technical team. The right-side profile image is optional, latest posts and latest news can be enabled per page, and navigation is driven from YAML data files.
 
-Link to your social media connections, too. Add your Facebook, Twitter, LinkedIn,
-Google Scholar, or just disable all of them.
+Use this demo as a quick tour:
 
+- Browse [Projects]({{ "/projects/" | relative_url }}) to see grouped repository cards and contribution links.
+- Open [Publications]({{ "/publications/" | relative_url }}) to see BibTeX-driven entries.
+- Read the [Blog]({{ "/blog/" | relative_url }}) for Markdown, math, tables, code blocks, and post covers.
+- Try the search button in the navigation bar after the site has been built.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-
-Stet clita kasd gubergren, no sea takimata Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+The content is intentionally simple. Replace these Markdown files and YAML entries with your own work, then keep the same structure for a polished static website.

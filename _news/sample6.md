@@ -1,8 +1,8 @@
 ---
-title: Will AI be friend with Jekyll?
+title: Dark mode and theme preference
 date: 2026-02-27
 layout: post
-description: Will AI be friend with Jekyll?
+description: Visitors can switch between light, dark, and system theme preferences.
 ---
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+Merida stores the visitor's theme preference locally and applies it before the page paints. This helps avoid a visible light-to-dark flash on repeat visits.

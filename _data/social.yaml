@@ -1,10 +1,9 @@
 items:
-  - name: Bluesky
-    url: https://bsky.app/
+  - name: Demo
+    url: https://j0m0k0.github.io/jekyll-theme-merida/
 
   - name: GitHub
-    url: https://github.com/
+    url: https://github.com/j0m0k0/jekyll-theme-merida
 
-  - name: LinkedIn
-    url: https://www.linkedin.com/
-
+  - name: RubyGems
+    url: https://rubygems.org/gems/jekyll-theme-merida

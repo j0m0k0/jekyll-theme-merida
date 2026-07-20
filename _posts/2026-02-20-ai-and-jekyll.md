@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Will AI be friend with Jekyll?"
+title: "Using AI in a Static Jekyll Workflow"
 date: 2026-03-03 21:27:00 -0600
 tags: [AI, Jekyll, Web Development, Automation]
 background:
@@ -11,7 +11,7 @@ background:
   y: 50%
 ---
 
-# The Static Evolution: Will AI be friend with Jekyll?
+# Using AI in a Static Jekyll Workflow
 
 For over a decade, **Jekyll** has been the reliable backbone of the static web. It’s the "old guard" of static site generators (SSGs), loved for its simplicity, its Ruby roots, and its seamless relationship with GitHub Pages. But as we move deeper into the era of Generative AI, a question arises: Is a tool built on the philosophy of "static" content compatible with the "dynamic" intelligence of AI?
 

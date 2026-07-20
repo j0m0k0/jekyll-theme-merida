@@ -1,6 +1,6 @@
 ---
-title: Sample 1
+title: Search index generated
 date: 2026-02-28
 layout: post
-description: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+description: Pagefind builds a static search index after Jekyll finishes.
 ---
