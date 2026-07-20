@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.13
+- Remove the gray background from publication entries on the research page.
+
 ## v0.0.12
 - Add public documentation for installation, configuration, content, customization, search, deployment, development, releases, support, and security.
 - Add a project logo and README badges for public repository presentation.

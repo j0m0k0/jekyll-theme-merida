@@ -33,7 +33,6 @@
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
   --time: var(--color-gray-200);
-  --research-box-bg: var(--color-gray-100);
 }
 
 html[data-theme="light"] {
@@ -57,7 +56,6 @@ html[data-theme="light"] {
   --search-row-hover: var(--color-gray-100);
   --search-bar-bg: var(--color-gray-200);
   --time: var(--color-gray-200);
-  --research-box-bg: var(--color-gray-100);
 
 
   .main a {
@@ -93,7 +91,6 @@ html[data-theme="dark"] {
   --search-row-hover: var(--color-gray-700);
   --search-bar-bg: var(--color-gray-700);
   --time: var(--color-gray-600);
-  --research-box-bg: none;
 
   .main a {
     @apply text-blue-400;
@@ -131,7 +128,6 @@ html[data-theme="dark"] {
     --search-row-hover: var(--color-gray-100);
     --search-bar-bg: var(--color-gray-200);
     --time: var(--color-gray-200);
-    --research-box-bg: var(--color-gray-100);
 
     .main a {
       @apply text-blue-700;
@@ -167,7 +163,6 @@ html[data-theme="dark"] {
     --search-row-hover: var(--color-gray-700);
     --search-bar-bg: var(--color-gray-700);
     --time: var(--color-gray-600);
-    --research-box-bg: none;
 
     .main a {
       @apply text-blue-400;
