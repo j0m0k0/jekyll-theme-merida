@@ -1,6 +1,6 @@
 # Change Log
 
-## Unreleased
+## v0.0.12
 - Add public documentation for installation, configuration, content, customization, search, deployment, development, releases, support, and security.
 - Add a project logo and README badges for public repository presentation.
 - Document `merida-starter` as the recommended path for users who want a ready-to-customize website.
@@ -8,6 +8,7 @@
 - Add Pagefind as an explicit development dependency.
 - Fix the release script theme name used while packaging the gem.
 - Correct starter content examples for profile images and post backgrounds.
+- Link open source contribution projects to closed pull requests by author.
 
 ## v0.0.11
 - Reduce project star badge width

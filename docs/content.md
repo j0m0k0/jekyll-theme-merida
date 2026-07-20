@@ -137,13 +137,14 @@ items:
     date: 2026-06-03
     user_name: example
     repo_name: project
+    author: your-github-username
     host: https://github.com
     category: Research
 
 orders: [Research]
 ```
 
-The projects layout groups items by `category`, sorts each group by `date` descending, links to `host/user_name/repo_name`, and shows a GitHub star badge from Shields.io.
+The projects layout groups items by `category`, sorts each group by `date` descending, links to `host/user_name/repo_name`, and shows a GitHub star badge from Shields.io. For the `Open Source Contributions` category, repo names link to closed pull requests by `author` in that repository.
 
 ## Publications
 

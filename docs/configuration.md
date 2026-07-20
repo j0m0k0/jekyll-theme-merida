@@ -171,6 +171,7 @@ items:
     date: 2026-06-03
     user_name: j0m0k0
     repo_name: jekyll-theme-merida
+    author: j0m0k0
     host: https://github.com
     category: Open Source Projects
 
@@ -185,6 +186,7 @@ Each item supports:
 - `date`: date used for sorting within its category.
 - `user_name`: account or organization name used for the repository URL and GitHub star badge.
 - `repo_name`: repository name used for the repository URL and GitHub star badge.
+- `author`: GitHub username used for contribution links in the `Open Source Contributions` category.
 - `host`: repository host URL, usually `https://github.com`.
 - `category`: group heading.
 

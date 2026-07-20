@@ -21,7 +21,12 @@ layout: base
         {{ repo.date | date: "%b %d, %Y" }}
       </time>
       {% if repo.host %}
-      <a class="mb-0! min-w-[200px] max-w-[200px] font-bold! truncate lg:text-center" href="{{ repo.host }}/{{ repo.user_name }}/{{ repo.repo_name}}">
+      {% assign repo_url = repo.host | append: "/" | append: repo.user_name | append: "/" | append: repo.repo_name | replace: "github.com//", "github.com/" %}
+      {% if repo.category == "Open Source Contributions" and repo.author %}
+      {% assign pull_author = repo.author | url_encode %}
+      {% assign repo_url = "https://github.com/" | append: repo.user_name | append: "/" | append: repo.repo_name | append: "/pulls?q=is%3Apr+author%3A" | append: pull_author | append: "+is%3Aclosed" %}
+      {% endif %}
+      <a class="mb-0! min-w-[200px] max-w-[200px] font-bold! truncate lg:text-center" href="{{ repo_url }}">
         {{ repo.name }}
       </a>
       {% endif %}
@@ -47,7 +52,12 @@ layout: base
         {{ repo.date | date: "%b %d, %Y" }}
       </time>
       {% if repo.host %}
-      <a class="mb-0! min-w-[200px] max-w-[200px] font-bold! truncate lg:text-center" href="{{ repo.host }}/{{ repo.user_name }}/{{ repo.repo_name}}">
+      {% assign repo_url = repo.host | append: "/" | append: repo.user_name | append: "/" | append: repo.repo_name | replace: "github.com//", "github.com/" %}
+      {% if repo.category == "Open Source Contributions" and repo.author %}
+      {% assign pull_author = repo.author | url_encode %}
+      {% assign repo_url = "https://github.com/" | append: repo.user_name | append: "/" | append: repo.repo_name | append: "/pulls?q=is%3Apr+author%3A" | append: pull_author | append: "+is%3Aclosed" %}
+      {% endif %}
+      <a class="mb-0! min-w-[200px] max-w-[200px] font-bold! truncate lg:text-center" href="{{ repo_url }}">
         {{ repo.name }}
       </a>
       {% endif %}
