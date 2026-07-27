@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.14
+- Show news titles in the news listing.
+
 ## v0.0.13
 - Remove the gray background from publication entries on the research page.
 
