@@ -8,6 +8,7 @@ layout: base
     <ul class="pl-0 space-y-3">
       {% assign sorted_news = site.news | sort: "date" | reverse %}
       {% for news in sorted_news %}
+      {% if news.title %}
       <li class="not-last:mb-4 px-3 py-2 border-l-4 border-[var(--border)] bg-[var(--card)] flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
 
         <!-- Date -->
@@ -34,6 +35,7 @@ layout: base
         {% endif %}
 
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </div>

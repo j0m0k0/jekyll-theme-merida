@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.17
+- Skip news entries without a title in the news listing.
+
 ## v0.0.16
 - Show news titles in the latest news listing.
 
