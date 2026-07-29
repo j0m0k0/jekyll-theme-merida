@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.19
+- Make the about page profile image circular and left-align the body text.
+
 ## v0.0.18
 - Remove the redundant description check from the news listing title block.
 

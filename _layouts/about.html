@@ -9,7 +9,7 @@ layout: base
     <div class="md:float-right md:ml-8 md:mb-4 w-full md:w-64 not-prose">
       <img
         alt="{{ page.profile.alt | escape }}"
-        class="mx-auto md:mx-0 rounded drop-shadow-2xl drop-shadow-gray-400/20 w-full h-auto"
+        class="mx-auto md:mx-0 aspect-square w-full object-cover rounded-full drop-shadow-2xl drop-shadow-gray-400/20"
         src="{{ page.profile.image | relative_url }}"
       />
       {% if page.profile.caption %}
@@ -20,7 +20,7 @@ layout: base
     </div>
     {% endif %}
 
-    <div class="text-justify">
+    <div>
       {{ content }}
     </div>
 
