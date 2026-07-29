@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.18
+- Remove the redundant description check from the news listing title block.
+
 ## v0.0.17
 - Skip news entries without a title in the news listing.
 

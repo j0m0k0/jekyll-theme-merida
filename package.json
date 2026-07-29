@@ -1,6 +1,6 @@
 {
   "name": "jekyll-theme-merida",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A minimal, responsive Jekyll theme for personal, academic, and technical writing websites.",
   "scripts": {
     "css:build": "npx @tailwindcss/cli -i assets/css/merida.src.css -o assets/css/merida.css --minify",

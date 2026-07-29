@@ -16,13 +16,11 @@ layout: base
           {{ news.date | date: "%b %d, %Y" }}
         </time>
 
-        <!-- Description -->
+        <!-- Title -->
         <div class="flex-1 min-w-0">
-          {% if news.description %}
           <p class="font-semibold my-0!">
             {{ news.title }}
           </p>
-          {% endif %}
         </div>
 
         <!-- Read more -->
