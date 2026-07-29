@@ -6,7 +6,7 @@
     <time class="font-bold min-w-32">{{ news.date | date: "%b %d, %Y" }}</time>
     <!-- Title always plain text -->
     <p class="not-prose mb-0!">
-      {{ news.description }}
+      {{ news.title }}
 
       <!-- Only add [more] if news has content -->
       {% if news.content and news.content != "" %}
