@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.0.15
+- Exclude the brand screenshot from the gem package.
+
 ## v0.0.14
 - Show news titles in the news listing.
 
